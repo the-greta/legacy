@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import KeyPerson from '@/components/atoms/KeyPerson';
+
 const AboutUs = () => {
   return (
     <Container>
@@ -19,21 +21,21 @@ const AboutUs = () => {
         그레타는 여러분께 최적의 솔루션과 기술을 제공하고, 국내 데이터 시장을 선도하기 위해 항상 최선을 다하겠습니다.
         </p>
       <KeyPersonWrap>
-        <div><h3>Key Person</h3></div>
-        <div>
-          <h5>공동대표 김현태</h5>
-          <p>
-            연세대학교 응용통계학과 교수<br/>
-            example@email.com
-          </p>
-        </div>
-        <div>
-          <h5>공동대표 김현태</h5>
-          <p>
-            연세대학교 응용통계학과 교수<br/>
-            example@email.com
-          </p>
-        </div>
+        <div><h3>Key<br/>Person</h3></div>
+        <KeyPerson
+          position="공동대표"
+          dep="연세대학교 응용통계학과 교수"
+          email="example@example.com"
+        >
+          김현태
+        </KeyPerson>
+        <KeyPerson
+          position="공동대표"
+          dep="연세대학교 응용통계학과 교수"
+          email="example@example.com"
+        >
+          임종호
+        </KeyPerson>
       </KeyPersonWrap>
       </Wrap>
       <div style={{flex: 2}}></div>

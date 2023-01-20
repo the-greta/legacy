@@ -7,6 +7,7 @@ import AppLink from '@/components/atoms/AppLink';
 import Footer from '@/components/atoms/Footer';
 import Header from '@/components/atoms/Header';
 
+
 export default function App({ Component, pageProps }) {
   return (
     <>
