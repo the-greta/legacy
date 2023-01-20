@@ -3,9 +3,9 @@ export const colors = {
   white: "#fff",
   gray: "#dce6e9",
 
-  primary: "#0070f3",
-  secondary: "#696969",
-  subcolor: "#34051a",
+  primary: "#005170",
+  secondary: "#9F814C",
+  subcolor: "#DFCEB0",
 
   border: '#eee'
 };

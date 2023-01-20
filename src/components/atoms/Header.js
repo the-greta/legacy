@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -8,13 +9,15 @@ const Header = ({children}) => {
   return (
     <Container>
       <Wrap>
-        <Image
-          src={gretaLogo}
-          alt="Greta Logo"
-          width={120}
-          height={30}
-          priority
-        />
+        <Logo href="/">
+          <Image
+            src={gretaLogo}
+            alt="Greta Logo"
+            width={120}
+            height={30}
+            priority
+          />
+        </Logo>
         <Section>
           {children}
         </Section>
@@ -26,15 +29,17 @@ const Header = ({children}) => {
 export default Header;
 
 const Container = styled.div`
-  width: 100%;
-  height: 66px;
-  display: flex;
-  position: fixed;
-  top: 0;
-  border-bottom: 1px solid lightgray;
-  z-index: 1;
-  background-color: #fff;
-  opacity: 0.8;
+  ${({theme}) => `
+    width: 100%;
+    height: 66px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid ${theme.colors.gray};
+    z-index: 1000;
+    background-color: #fff;
+    opacity: 0.8;
+  `}
 `
 const Wrap = styled.header`
   width: 100%;
@@ -44,6 +49,9 @@ const Wrap = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1.5rem;
+`
+const Logo = styled(Link)`
+  display: flex;
 `
 const Section = styled.section`
   display: flex;

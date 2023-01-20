@@ -6,7 +6,6 @@ import styled from 'styled-components';
 const WhatWeDo = () => {
   return (
     <Container>
-      <div style={{flex: 2}}></div>
       <Wrap>
         <h2>What We Do?</h2>
         <Context>
@@ -26,9 +25,13 @@ const Container = styled.div`
 const Wrap = styled.div`
   flex: 8;
   max-width: 38rem;
+  margin: 0 auto;
+  ${({theme}) => theme.breakpoint.lg`
+    margin: 0 0 0 auto;
+  `}
 `
 const Context = styled.p`
-  margin: 0.5rem 0 1.5rem;
+  margin: 1rem 0 1.5rem;
 `
 const LinkText = styled(Link)`
   font-weight: 600;

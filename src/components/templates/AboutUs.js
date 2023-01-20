@@ -26,24 +26,25 @@ const AboutUs = () => {
           </P>
         </Context>
         <KeyPersonWrap>
-          <div style={{paddingRight: '0.5rem'}}><h3>Key<br/>Person</h3></div>
-          <KeyPerson
-            position="공동대표"
-            dep="연세대학교 응용통계학과 교수"
-            email="example@example.com"
-          >
-            김현태
-          </KeyPerson>
-          <KeyPerson
-            position="공동대표"
-            dep="연세대학교 응용통계학과 교수"
-            email="example@example.com"
-          >
-            임종호
-          </KeyPerson>
+          <div style={{paddingRight: '1rem'}}><h3>Key<br/>Person</h3></div>
+          <KeyPersonContext>
+            <KeyPerson
+              position="공동대표"
+              dep="연세대학교 응용통계학과 교수"
+              email="example@example.com"
+            >
+              김현태
+            </KeyPerson>
+            <KeyPerson
+              position="공동대표"
+              dep="연세대학교 응용통계학과 교수"
+              email="example@example.com"
+            >
+              임종호
+            </KeyPerson>
+          </KeyPersonContext>
         </KeyPersonWrap>
       </Wrap>
-      <div style={{flex: 2}}></div>
     </Container>
   );
 };
@@ -54,16 +55,28 @@ const Container = styled.div`
   display: flex;
 `
 const Wrap = styled.div`
-  flex: 8;
   max-width: 38rem;
-`
-const KeyPersonWrap = styled.div`
-  display: flex;
-  gap: 1.2rem;
-  padding-top: 0.5rem;
+  margin: 0 auto 1.5rem;
+  ${({theme}) => theme.breakpoint.lg`
+    max-width: 50rem;
+    margin: 0 auto 1.5rem 0;
+  `}
 `
 const Context = styled.div`
+  margin: 1rem 0 1.5rem;
 `
 const P = styled.p`
   margin: 0.5rem 0 1rem;
+`
+const KeyPersonWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  ${({theme}) => theme.breakpoint.md`
+    flex-direction: row;
+  `}
+`
+const KeyPersonContext = styled.div`
+  display: flex;
+  gap: 1.2rem;
 `

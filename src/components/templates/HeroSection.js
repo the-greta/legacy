@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const HeroSection = () => {
   return (
     <Container>
@@ -32,6 +33,7 @@ const Wrap = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  max-width: 38rem;
 `
 const Context = styled.div`
   max-width: 1024px;

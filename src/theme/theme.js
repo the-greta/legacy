@@ -1,4 +1,4 @@
-import { breakpoint } from "./setting/breakpoint";
+import { breakpoint } from "./setting/breakpoints";
 import { colors, darkThemeColors, lightThemeColors } from "./setting/colors";
 import { fonts } from "./setting/fonts";
 

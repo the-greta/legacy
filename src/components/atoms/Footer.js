@@ -6,7 +6,7 @@ const Footer = () => {
     <Container>
       <Wrap>
         <FooterText>
-          (주) 그레타
+          <b>(주) 그레타</b>
         </FooterText>
 
         <FooterText>
@@ -26,11 +26,13 @@ const Footer = () => {
 export default Footer;
 
 const Container = styled.div`
-  width: 100%;
-  display: flex;
-  border-top: 1px solid lightgray;
-  position: absolute;
-  bottom: 0;
+  ${({theme}) => `
+    width: 100%;
+    display: flex;
+    border-top: 1px solid ${theme.colors.gray};
+    position: absolute;
+    bottom: 0;
+  `}
 `
 const Wrap = styled.footer`
   width: 100%;
