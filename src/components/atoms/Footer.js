@@ -39,5 +39,7 @@ const Wrap = styled.footer`
   padding: 1.5rem 1.5rem 2rem;
 `
 const FooterText = styled.p`
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin: 0.2rem 0 0.6rem;
 `

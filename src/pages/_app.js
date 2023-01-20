@@ -31,7 +31,8 @@ const Container = styled.div`
   position: relative;
 `
 const Main = styled.main`
-  padding: 66px 1.5rem 200px;
+  padding: 66px 1.5rem 300px;
   margin: 0 auto;
   max-width: 1024px;
+  overflow: hidden;
 `

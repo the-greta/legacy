@@ -32,6 +32,9 @@ const Container = styled.div`
   position: fixed;
   top: 0;
   border-bottom: 1px solid lightgray;
+  z-index: 1;
+  background-color: #fff;
+  opacity: 0.8;
 `
 const Wrap = styled.header`
   width: 100%;
@@ -45,4 +48,5 @@ const Wrap = styled.header`
 const Section = styled.section`
   display: flex;
   gap: 1.5rem;
+  font-size: 0.875rem;
 `
