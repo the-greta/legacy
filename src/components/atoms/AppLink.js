@@ -16,10 +16,10 @@ export default AppLink;
 
 const LinkText = styled(Link)`
   text-decoration: none;
-  color: lightgray;
+  color: #333;
   font-weight: 600;
-  transition: 0.4s ease;
+  transition: 0.3s ease;
   :hover {
-    color: #333;
+    color: gray;
   }
 `

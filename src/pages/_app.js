@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Header>
         <AppLink href="/" >회사소개</AppLink>
-        <AppLink href="/" >주요기술</AppLink>
+        <AppLink href="/solutions" >주요기술</AppLink>
         <AppLink href="https://naver.com" >인재채용</AppLink>
       </Header>
       <Container>
