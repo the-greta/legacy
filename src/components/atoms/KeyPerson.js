@@ -29,6 +29,7 @@ const Container = styled.div`
 const Name = styled.span`
   font-weight: 600;
   font-size: 1.2rem;
+  opacity: 1;
 `
 const Wrap = styled.div`
   padding-top: 0.4rem;

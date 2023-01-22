@@ -26,22 +26,25 @@ const Footer = () => {
 export default Footer;
 
 const Container = styled.div`
-  ${({theme}) => `
-    width: 100%;
-    display: flex;
-    border-top: 1px solid ${theme.colors.gray};
-    position: absolute;
-    bottom: 0;
-  `}
+  width: 100%;
+  display: flex;
+  border-top: 1px solid ${({theme}) => theme.colors.gray};
+  position: absolute;
+  bottom: 0;
 `
 const Wrap = styled.footer`
   width: 100%;
-  max-width: 1024px;
   margin: 0 auto;
-  padding: 1.5rem 1.5rem 2rem;
+  padding: 1.5rem 3rem 2rem;
+  max-width: 38rem;
+  ${({theme}) => theme.breakpoint.lg`
+    max-width: 1024px;
+    margin: 0 auto;
+  `}
 `
 const FooterText = styled.p`
   font-size: 0.75rem;
   line-height: 1rem;
   margin: 0.2rem 0 0.6rem;
+  opacity: 0.7;
 `

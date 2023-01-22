@@ -58,7 +58,7 @@ const Wrap = styled.div`
   max-width: 38rem;
   margin: 0 auto 1.5rem;
   ${({theme}) => theme.breakpoint.lg`
-    max-width: 50rem;
+    max-width: 45rem;
     margin: 0 auto 1.5rem 0;
   `}
 `
