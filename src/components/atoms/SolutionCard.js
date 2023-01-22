@@ -21,7 +21,7 @@ const Context = styled.p`
   line-height: 1.5;
 `
 const Wrap = styled.div`
-  border: 1px solid ${({theme}) => theme.colors.gray};
+  border: 0px solid ${({theme}) => theme.colors.gray};
   border-radius: 0.5rem;
   padding: 1.5rem 1.5rem 1rem;
 `

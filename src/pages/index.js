@@ -23,5 +23,5 @@ export default index;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 9rem;
+  gap: 6rem;
 `

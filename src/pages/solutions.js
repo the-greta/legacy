@@ -41,8 +41,7 @@ const P = styled.p`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: none;
-  max-width: 50rem;
-  gap: 1.5rem;
+  gap: 3rem;
   padding: 1rem 0 0;
   ${({theme}) => theme.breakpoint.md`
     grid-template-columns: repeat(2, minmax(25%, auto));

@@ -18,7 +18,11 @@ export default function App({ Component, pageProps }) {
         <Header>
           <AppLink href="/" >회사소개</AppLink>
           <AppLink href="/solutions" >주요기술</AppLink>
-          <AppLink href="https://naver.com" >인재채용</AppLink>
+          <AppLink
+            href="https://broad-calendula-d4c.notion.site/GRETA-ddd868d6109b4434ae9ad8efdaec2e91"
+          >
+            인재채용
+          </AppLink>
         </Header>
         <Container>
           <Main>

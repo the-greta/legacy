@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const HeroSection = () => {
   return (
     <Container>
       <Wrap>
-        <div style={{flex: 1}}></div>
         <Context>
           <Title>Great Era of Data</Title>
           <P>
@@ -22,16 +20,16 @@ const HeroSection = () => {
 export default HeroSection;
 
 const Container = styled.div`
-  height: 30rem;
+  /* height: 30rem; */
   background-color: #dfceb0;
+  /* background-color: #AC9060; */
   margin: 0 calc(50% - 50vw);
   padding: 0 calc(50vw - 50%);
   width: calc(100vw - 2 * calc(50vw - 50%));
 `
 const Wrap = styled.div`
+  padding: 3rem 0 3rem;
   height: 100%;
-  display: flex;
-  flex-direction: column;
   max-width: 38rem;
 `
 const Context = styled.div`
@@ -39,10 +37,7 @@ const Context = styled.div`
   flex: 3;
 `
 const Title = styled.h1`
-  font-size: 2.8rem;
-  ${({theme}) => theme.breakpoint.sm`
-    font-size: 3.2rem;
-  `}
+  font-size: 2.4rem;
 `
 const Br = styled.br`
   display: none;
