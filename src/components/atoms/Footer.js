@@ -37,7 +37,7 @@ const Wrap = styled.footer`
   margin: 0 auto;
   padding: 1.5rem 3rem 2rem;
   max-width: 38rem;
-  ${({theme}) => theme.breakpoint.lg`
+  ${({theme}) => theme.breakpoint.md`
     max-width: 1024px;
     margin: 0 auto;
   `}

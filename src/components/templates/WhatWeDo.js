@@ -7,7 +7,7 @@ const WhatWeDo = () => {
   return (
     <Container>
       <Wrap>
-        <h2>What We Do?</h2>
+        <Title>What We Do?</Title>
         <Context>
           그레타 만의 전문 지식과 기술력을 바탕으로 요청 사항에 맞는 데이터 분석 솔루션과 컨설팅, 학술연구 용역 등을 제공합니다.
         </Context>
@@ -26,15 +26,20 @@ const Wrap = styled.div`
   flex: 8;
   max-width: 38rem;
   margin: 0 auto;
-  ${({theme}) => theme.breakpoint.lg`
-    margin: 0 0 0 auto;
+  ${({theme}) => theme.breakpoint.md`
+    margin: 0 auto 0 0;
   `}
+`
+const Title = styled.div`
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
 `
 const Context = styled.p`
   margin: 1rem 0 1.5rem;
 `
 const LinkText = styled(Link)`
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   color: #333;
 `

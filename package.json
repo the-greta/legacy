@@ -12,9 +12,10 @@
     "format": "npm run eslint:fix && npm run prettier:fix"
   },
   "dependencies": {
-    "@next/font": "13.1.2",
+    "@next/font": "^13.1.2",
     "eslint-config-next": "13.1.2",
     "eslint-config-prettier": "^8.6.0",
+    "framer-motion": "^8.5.0",
     "next": "13.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",

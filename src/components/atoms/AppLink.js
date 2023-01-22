@@ -6,7 +6,7 @@ const AppLink = (props) => {
   const href = props.href
   const target = props.target || (href.startsWith("http")? '_blank': undefined);
   return (
-    <LinkText href={href} target={target}>
+    <LinkText href={href} target={target}  scroll={false}>
       {props.children}
     </LinkText>
   );

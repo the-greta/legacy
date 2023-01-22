@@ -37,8 +37,7 @@ const Container = styled.div`
     top: 0;
     border-bottom: 1px solid ${theme.colors.gray};
     z-index: 1000;
-    background-color: #fff;
-    opacity: 0.8;
+    background-color: #fff
   `}
 `
 const Wrap = styled.header`

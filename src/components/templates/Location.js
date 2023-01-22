@@ -8,15 +8,19 @@ const Location = () => {
   return (
     <div>
       <Container>
-        <h2>Location</h2>
+        <Title>location</Title>
         <Wrap>
           <Context>
             <Map latitude="37.5684945" longitude="126.9795985"/>
           </Context>
           <Context>
             <LocationInfo info="주소">서울특별시 중구 무교로 28 시그너스빌딩 604호</LocationInfo>
-            <LocationInfo info="전화">+82-70-8648-1024</LocationInfo>
-            <LocationInfo info="이메일">greta@the-greta.com</LocationInfo>
+            <LocationInfo info="전화">
+              <A href="tel:+827086481024">+82-70-8648-1024</A>
+            </LocationInfo>
+            <LocationInfo info="이메일">
+              <A href="mailto:greta@the-greta.com">greta@the-greta.com</A>
+            </LocationInfo>
             <LocationInfo info="영업시간">평일 09:00~18:00 (주말 휴무)</LocationInfo>
           </Context>
         </Wrap>
@@ -32,18 +36,30 @@ const Container = styled.div`
   flex-direction: column;
   max-width: 38rem;
   margin: 0 auto;
-  ${({theme}) => theme.breakpoint.lg`
-    dmargin: 0 auto 0 0;
+  ${({theme}) => theme.breakpoint.md`
+    margin: 0 auto 0 0;
     max-width: inherit;
   `}
 `
 const Wrap = styled.div`
   margin: 1rem 0 1.5rem;
-  ${({theme}) => theme.breakpoint.lg`
-    display: flex;
-    flex-direction: row-reverse;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  ${({theme}) => theme.breakpoint.md`
+    flex-direction: row;
+    gap: 3rem;
   `}
+`
+const Title = styled.div`
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
 `
 const Context = styled.div`
   flex: 1;
+`
+const A = styled.a`
+  text-decoration: none;
+  color: #333;
 `

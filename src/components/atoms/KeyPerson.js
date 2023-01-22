@@ -5,7 +5,7 @@ const KeyPerson = (props) => {
   return (
     <Container>
       <div>
-        {props.position} <Name>{props.children}</Name>
+        <Name>{props.children}</Name>
       </div>
       <Wrap>
         <div>
@@ -27,9 +27,7 @@ const Container = styled.div`
   font-size: 0.875rem;
 `
 const Name = styled.span`
-  font-weight: 600;
-  font-size: 1.2rem;
-  opacity: 1;
+  font-weight: 700;
 `
 const Wrap = styled.div`
   padding-top: 0.4rem;
