@@ -20,6 +20,6 @@ const LinkText = styled(Link)`
   font-weight: 600;
   transition: 0.3s ease;
   :hover {
-    color: gray;
+    opacity: 0.6;
   }
 `

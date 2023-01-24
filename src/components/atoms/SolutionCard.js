@@ -31,7 +31,7 @@ const Context = styled.p`
 const BoxBefore = styled.div`
   :before {
     content: '\\00a0';
-    width: 1rem;
+    width: 0.5rem;
     position: relative;
     display: inline-block;
     background-color: #9E804A;

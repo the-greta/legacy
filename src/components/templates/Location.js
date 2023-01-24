@@ -38,7 +38,7 @@ const MapShadow = styled.div`
   height: 90%;
   width: 100%;
   position: absolute;
-  top: 25px;
+  top: 30px;
   left: 25px;
 `
 const Container = styled.div`
