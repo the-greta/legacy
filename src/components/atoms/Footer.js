@@ -31,6 +31,7 @@ const Container = styled.div`
   border-top: 1px solid ${({theme}) => theme.colors.gray};
   position: absolute;
   bottom: 0;
+  background-color: #fff;
 `
 const Wrap = styled.footer`
   width: 100%;

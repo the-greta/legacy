@@ -14,7 +14,10 @@ export default SolutionCard;
 
 const Wrap = styled.div`
   border: 0px solid ${({theme}) => theme.colors.gray};
-  padding: 1.5rem 2rem 3rem;
+  padding: 1rem 0 2rem;
+  ${({theme}) => theme.breakpoint.md`
+    padding: 1.5rem 2rem 3rem;
+  `}
 `
 const Title = styled.div`
   font-weight: 700;

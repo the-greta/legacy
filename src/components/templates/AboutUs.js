@@ -11,7 +11,7 @@ const AboutUs = () => {
       <Wrap>
         <Col style={{flex: 1}}>
           <Sub>Founders</Sub>
-          <Row style={{gap: '3rem'}}>
+          <Row style={{gap: '2rem', flexWrap: 'wrap'}}>
             <KeyPerson
               dep="연세대학교 응용통계학과 교수"
               email="example@example.com"
@@ -58,9 +58,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 38rem;
-  margin: 0 auto;
   ${({theme}) => theme.breakpoint.md`
     max-width: inherit;
+    margin: 0 auto;
   `}
 `
 const Row = styled.div`

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const WhatWeDo = () => {
   return (
+    <Bg>
     <Container>
       <Wrap>
         <Title>What We Do?</Title>
@@ -14,11 +15,17 @@ const WhatWeDo = () => {
         <LinkText href="/solutions"><ArrowAfter>솔루션 보러가기</ArrowAfter></LinkText>
       </Wrap>
     </Container>
+    </Bg>
   );
 };
 
 export default WhatWeDo;
 
+const Bg = styled.div`
+  /* margin: 0 calc(50% - 50vw);
+  padding: 4rem calc(50vw - 50%);
+  background-color: #d8ccb7; */
+`
 const Container = styled.div`
   display: flex;
 `

@@ -36,12 +36,13 @@ export default Solutions;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  padding-bottom: 220px;
 `
 const Grid = styled.div`
   display: grid;
   grid-template-columns: none;
-  padding-top: 1.5rem;
   ${({theme}) => theme.breakpoint.md`
     grid-template-columns: repeat(2, minmax(25%, auto));
+    padding-top: 1.5rem;
   `}
 `
