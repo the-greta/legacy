@@ -43,12 +43,14 @@ const Container = styled.div`
   `}
 `
 const Wrap = styled.div`
-  margin-bottom: 3rem;
+  flex: 1;
+  margin-bottom: 2rem;
   padding: 0 2rem 0 0;
   ${({theme}) => theme.breakpoint.md`
     margin-bottom: 0;
   `}
 `
 const Context = styled.div`
+  flex: 2;
   max-width: 38rem;
 `

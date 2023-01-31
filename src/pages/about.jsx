@@ -3,8 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import AboutUs from '@/components/templates/AboutUs';
+import Founders from '@/components/templates/Founders';
 import Location from '@/components/templates/Location';
-import WhatWeDo from '@/components/templates/WhatWeDo';
 
 const about = () => {
   return (
@@ -15,7 +15,7 @@ const about = () => {
     >
       <Container>
         <AboutUs/>
-        <WhatWeDo/>
+        <Founders/>
         {/* <Hr/> */}
       </Container>
       <Bg>
