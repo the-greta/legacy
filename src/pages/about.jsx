@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 import React from 'react';
 import styled from 'styled-components';
 
-import AboutUs from '@/components/templates/AboutUs';
-import Founders from '@/components/templates/Founders';
-import Location from '@/components/templates/Location';
+import AboutUs from '@/components/templates/AboutUs.jsx';
+import Founders from '@/components/templates/Founders.jsx';
+import Profile from '@/components/templates/Profile.jsx';
 
 const about = () => {
   return (
@@ -16,11 +16,8 @@ const about = () => {
       <Container>
         <AboutUs/>
         <Founders/>
-        {/* <Hr/> */}
+        <Profile/>
       </Container>
-      <Bg>
-        <Location/>
-      </Bg>
     </motion.div>
   );
 };
@@ -31,9 +28,4 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5rem;
-`
-const Bg = styled.div`
-  margin: 5rem calc(50% - 50vw) 0;
-  padding: 5rem calc(50vw - 50%) 220px;
-  background-color: #D8CCB7;
 `

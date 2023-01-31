@@ -12,7 +12,7 @@ const AboutUs = () => {
         <Subtitle fontSize="14">회사 개요</Subtitle>
       </Wrap>
       <Context>
-        <p>
+        <p style={{marginTop: 0}}>
         그레타(GRETA)는 2021년에 설립된 데이터 분석 솔루션 개발 및 컨설팅 기업입니다.
         연세대학교 응용통계학과 내 데이터 분석 전문가 두 명과 여러 연구 파트너들을 중심으로
         학술연구 용역, 연구개발 컨설팅, 소프트웨어 개발 등의 솔루션을 제공해 드립니다.
@@ -53,4 +53,5 @@ const Wrap = styled.div`
 const Context = styled.div`
   flex: 2;
   max-width: 38rem;
+  margin-top: 1rem;
 `

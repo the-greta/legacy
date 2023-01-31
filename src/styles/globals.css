@@ -30,3 +30,20 @@ p {
 ::-webkit-scrollbar-corner {
   background: #fff;
 }
+
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 1.5em 0;
+  border-bottom: 1px solid #999;
+}
+th {
+  font-weight: 700;
+  width: 25%;
+}
+td {
+  width: 65%;
+}
