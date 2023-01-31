@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -41,11 +42,29 @@ const index = () => {
         </Wrap>
 
         <Wrap>
-          <h3>
+          <h3 style={{marginBottom: "3rem"}}>
             높은 전문 지식과 기술력을 바탕으로<br/>
             High-End 데이터 솔루션을 제공합니다.
           </h3>
           <Partner>
+            <Image
+              src="/next.svg"
+              alt="Next.js Logo"
+              width={120}
+              height={20}
+            />
+            <Image
+              src="/next.svg"
+              alt="Next.js Logo"
+              width={120}
+              height={20}
+            />
+            <Image
+              src="/next.svg"
+              alt="Next.js Logo"
+              width={120}
+              height={20}
+            />
           </Partner>
         </Wrap>
       </Container>
@@ -59,7 +78,7 @@ const Container = styled.div`
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
   background-color: #fff;
 `
 const VideoWrap = styled.header`
@@ -98,4 +117,7 @@ const Business = styled.div`
   gap: 2rem;
 `
 const Partner = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 `
