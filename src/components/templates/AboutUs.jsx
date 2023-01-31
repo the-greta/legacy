@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SectionTitle from '@/components/atoms/SectionTitle';
 import Subtitle from '@/components/atoms/Subtitle';
-import Title from '@/components/atoms/Title';
 
 const AboutUs = () => {
   return (
     <Container>
       <Wrap>
-        <Title size="h2">About</Title>
+        <SectionTitle size="h2">About</SectionTitle>
         <Subtitle fontSize="14">회사 개요</Subtitle>
       </Wrap>
       <Context>

@@ -44,7 +44,7 @@ const Container = styled.div`
   overflow: hidden;
 `
 const Main = styled.main`
-  padding: 66px 3rem 200px;
+  padding: 100px 3rem 200px;
   margin: 0 auto;
   max-width: 1024px;
 `

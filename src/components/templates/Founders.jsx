@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import KeyPerson from '@/components/atoms/KeyPerson';
+import SectionTitle from '@/components/atoms/SectionTitle';
 import Subtitle from '@/components/atoms/Subtitle';
-import Title from '@/components/atoms/Title';
 
 const Founders = () => {
   return (
     <Container>
         <Wrap>
-          <Title size="h2">Founders</Title>
+          <SectionTitle size="h2">Founders</SectionTitle>
           <Subtitle fontSize="14">공동대표</Subtitle>
         </Wrap>
         <Context>
@@ -39,8 +39,8 @@ export default Founders;
 const Container = styled.div`
   margin: 0 auto;
   ${({theme}) => theme.breakpoint.md`
-    margin: 0;
     display: flex;
+    margin: 0;
     justify-content: space-between;
   `}
 `
@@ -58,6 +58,7 @@ const Context = styled.div`
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 38rem;
+  margin-top: 1rem;
   ${({theme}) => theme.breakpoint.sm`
     display: flex;
     gap: 3rem;

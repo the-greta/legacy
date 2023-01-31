@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SectionTitle from '@/components/atoms/SectionTitle';
 import Subtitle from '@/components/atoms/Subtitle';
-import Title from '@/components/atoms/Title';
 
 const Profile = () => {
   return (
     <Container>
         <Wrap>
-          <Title size="h2">Profile</Title>
+          <SectionTitle size="h2">Profile</SectionTitle>
           <Subtitle fontSize="14">회사 정보</Subtitle>
         </Wrap>
         <Context>
-          <table>
+          <table style={{overflow: "scroll"}}>
             <tbody>
               <tr>
                 <th>회사명</th>

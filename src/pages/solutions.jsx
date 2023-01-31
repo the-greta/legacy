@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react';
 import styled from 'styled-components';
 
-import PageTitle from '@/components/atoms/Title.jsx';
+import PageTitle from '@/components/atoms/SectionTitle.jsx';
 // import SolutionCard from '@/components/atoms/SolutionCard.jsx';
 
 const Solutions = () => {

@@ -5,7 +5,7 @@ const fontStyle = {
   margin: "1rem 0 0.5rem"
 }
 
-const PageTitle = (props) => {
+const SectionTitle = (props) => {
   return (
     <Wrap>
       { props.size === "h1"
@@ -16,7 +16,7 @@ const PageTitle = (props) => {
   );
 };
 
-export default PageTitle;
+export default SectionTitle;
 
 const Wrap = styled.div`
   color: #333;

@@ -38,6 +38,4 @@ export default Map;
 
 const Container = styled.div`
   aspect-ratio: 323.6 / 200;
-  /* border-radius: 0.875rem; */
-  margin: 0.5rem 0 1rem;
 `

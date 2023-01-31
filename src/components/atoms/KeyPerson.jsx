@@ -24,7 +24,6 @@ export default KeyPerson;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
 `
 const Name = styled.span`
   font-weight: 700;

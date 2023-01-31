@@ -6,31 +6,33 @@ body {
   /* background-color: #F5F2ED; */
 }
 
+/* Fonts */
 h1 {
+  font-size: 2.25rem;
 }
 h2 {
-  font-size: 2rem;
-}
-h3 {
+  font-size: 1.5rem;
 }
 p {
   line-height: 1.5;
 }
 
+
+/* Scroll Bar */
 ::-webkit-scrollbar {
   height: 5px;
   width: 6px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #333;
   -webkit-border-radius: 1ex;
 }
-
 ::-webkit-scrollbar-corner {
   background: #fff;
 }
 
+
+/* Tables */
 table {
   width: 100%;
   text-align: left;

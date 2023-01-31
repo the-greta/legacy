@@ -14,8 +14,8 @@ export default Subtitle;
 const Wrap = styled.div`
   color: #333;
   opacity: 0.5;
-  font-size: ${props => props.fontSize};
+  font-size: ${props => props.fontSize}px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  ${props => props.fontSize === "16"? "margin: 0 0 0.8rem 0.8rem;": ""};
 `
