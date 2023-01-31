@@ -83,7 +83,7 @@ const Container = styled.div`
 `
 const VideoWrap = styled.header`
   position: relative;
-  margin: -66px calc(50% - 50vw) 0;
+  margin: -100px calc(50% - 50vw) 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
