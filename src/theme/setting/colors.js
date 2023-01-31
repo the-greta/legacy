@@ -1,13 +1,13 @@
 export const colors = {
-  black: "#333333",
+  black: "#333",
   white: "#fff",
-  gray: "#dce6e9",
 
-  primary: "#005170",
-  secondary: "#9F814C",
-  subcolor: "#DFCEB0",
+  darkgray: "#6e6e6e",
+  gray: "#999",
+  lightgray: '#f5f5f5',
 
-  border: '#eee'
+  primary: "#123150",
+  secondary: "#081827",
 };
 
 export const lightThemeColors = {

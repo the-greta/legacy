@@ -12,8 +12,7 @@ const Subtitle = (props) => {
 export default Subtitle;
 
 const Wrap = styled.div`
-  color: #333;
-  opacity: 0.5;
+  color: ${({theme})=> theme.colors.gray};
   font-size: ${props => props.fontSize}px;
   font-weight: 700;
   text-transform: uppercase;

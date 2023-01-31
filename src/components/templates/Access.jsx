@@ -7,7 +7,8 @@ import Subtitle from '@/components/atoms/Subtitle';
 
 const Access = () => {
   return (
-    <Container>
+    <Bg>
+      <Container>
         <Wrap>
           <SectionTitle size="h2">Access</SectionTitle>
           <Subtitle fontSize="14">찾아오시는 길</Subtitle>
@@ -15,12 +16,18 @@ const Access = () => {
         <Context>
           <Map latitude="37.5684945" longitude="126.9795985"/>
         </Context>
-    </Container>
+      </Container>
+    </Bg>
   );
 };
 
 export default Access;
 
+const Bg = styled.div`
+  margin: 0 calc(50% - 50vw);
+  padding: 2.5rem calc(50vw - 50%) 3rem;
+  background-color: ${({theme})=> theme.colors.lightgray};
+`
 const Container = styled.div`
   margin: 0 auto;
   width: 100%;

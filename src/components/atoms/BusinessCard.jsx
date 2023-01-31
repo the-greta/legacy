@@ -13,9 +13,9 @@ const BusinessCard = (props) => {
                 placeholder="blur"
             />
             <h3>{props.title}</h3>
-            <p>
+            <Context>
                 {props.children}
-            </p>
+            </Context>
         </Container>
     );
 };
@@ -24,4 +24,7 @@ export default BusinessCard;
 
 const Container = styled.div`
     text-align: center;
+`
+const Context = styled.p`
+    color: ${({theme})=> theme.colors.gray};
 `

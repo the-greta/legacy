@@ -46,5 +46,5 @@ const Container = styled.div`
 const Underline = styled.div`
   height: 24px;
   margin: 0 calc(50% - 50vw) 0 0;
-  background-color: red;
+  background-color: ${({theme})=> theme.colors.primary};
 `

@@ -30,8 +30,7 @@ const Name = styled.span`
 `
 const Position = styled.span`
   font-size: 0.75rem;
-  color: #333;
-  opacity: 0.5;
+  color: ${({theme})=> theme.colors.gray};
   line-height: 1.5;
 `
 const Wrap = styled.div`
