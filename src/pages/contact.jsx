@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ContactForm from '@/components/atoms/ContactForm';
+import PageHeader from '@/components/atoms/PageHeader';
 import SectionTitle from '@/components/atoms/SectionTitle';
 import Subtitle from '@/components/atoms/Subtitle';
 
@@ -13,6 +14,7 @@ const contact = () => {
       animate={{opacity: 1}}
       exit={{opacity: 0}}
     >
+      <PageHeader/>
       <Container>
         <div>
           <div style={{display: "flex", alignItems: "end"}}>

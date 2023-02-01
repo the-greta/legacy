@@ -19,7 +19,7 @@ export default function App({ Component, pageProps, router }) {
       <div className={inter.className}>
         <Header>
           <AppLink href="/about" >회사소개</AppLink>
-          <AppLink href="/solutions" >사업분야</AppLink>
+          {/* <AppLink href="/solutions" >사업분야</AppLink> */}
           <AppLink href="/contact" >문의상담</AppLink>
           <AppLink href={applyLink}>인재채용</AppLink>
         </Header>

@@ -5,10 +5,10 @@ import styled from 'styled-components';
 import PageHeader from '@/components/atoms/PageHeader';
 import SectionTitle from '@/components/atoms/SectionTitle';
 import Subtitle from '@/components/atoms/Subtitle';
-import AboutUs from '@/components/templates/AboutUs';
-import Access from '@/components/templates/Access';
-import Founders from '@/components/templates/Founders';
-import Profile from '@/components/templates/Profile';
+// import AboutUs from '@/components/templates/AboutUs';
+import Access from '@/components/blocks/Access';
+import Founders from '@/components/blocks/Founders';
+import Profile from '@/components/blocks/Profile';
 
 const about = () => {
   return (
@@ -26,9 +26,9 @@ const about = () => {
           </div>
           <Underline/>
         </div>
-        <AboutUs/>
-        <Founders/>
+        {/* <AboutUs/> */}
         <Profile/>
+        <Founders/>
         <Access/>
       </Container>
     </motion.div>

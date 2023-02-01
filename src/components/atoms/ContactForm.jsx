@@ -9,53 +9,33 @@ const ContactForm = () => {
   return (
     <Container>
       <Form onSubmit={sendMail}>
-        {/* <div>
-          <label>문의 종류</label>
-
-          <input
-            type="checkbox"
-          />
-          <label>사업 소개</label>
-          <input
-            type="checkbox"
-          />
-          <label>협업 문의</label>
-          <input
-            type="checkbox"
-          />
-          <label>방문 요청</label>
-          <input
-            type="checkbox"
-          />
-          <label>기타</label>
-        </div> */}
-        <Row>
-          <Col flex="1">
-            <Label>이름</Label>
-          </Col>
-          <Col flex="2">
-            <Input/>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col flex="1">
-            <Label>답장 받으실 이메일</Label>
-          </Col>
-          <Col flex="2">
-            <Input type="email"/>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col flex="1">
-            <Label>문의 내용</Label>
-          </Col>
-          <Col flex="2">
-            <Textarea rows="10" cols="80"/>
-          </Col>
-        </Row>
-
+        <Table>
+          <tbody style={{display: "block"}}>
+            <Tr>
+              <Th>문의 종류</Th>
+              <Td>
+                <Wrap>
+                  <CatLabel><input type="checkbox" name="category"/>사업 소개</CatLabel>
+                  <CatLabel><input type="checkbox" name="category"/>협업 문의</CatLabel>
+                  <CatLabel><input type="checkbox" name="category"/>방문 요청</CatLabel>
+                  <CatLabel><input type="checkbox" name="category"/>기타</CatLabel>
+                </Wrap>
+              </Td>
+            </Tr>
+            <Tr>
+              <Th>이름</Th>
+              <Td><div><Input type="text" placeholder="이름을 입력해 주세요."/></div></Td>
+            </Tr>
+            <Tr>
+              <Th>이메일</Th>
+              <Td><Input type="email" placeholder="이메일을 입력해 주세요."/></Td>
+            </Tr>
+            <Tr>
+              <Th style={{verticalAlign: "top"}}>문의 내용</Th>
+              <Td><Textarea rows="10"  placeholder="문의 내용을 작성해 주세요."/></Td>
+            </Tr>
+          </tbody>
+        </Table>
         <button type='submit'>submit</button>
       </Form>
     </Container>
@@ -65,44 +45,81 @@ const ContactForm = () => {
 export default ContactForm;
 
 const Container = styled.div`
+  background-color: ${({theme}) => theme.colors.lightgray};
 `
 const Form = styled.form`
-  background-color: ${({theme}) => theme.colors.lightgray};
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1024px;
-  margin: 0 auto;
-`
-const Row = styled.div`
-  display: flex;
-`
-const Col = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: ${props => props.flex};
-`
-const Label = styled.label`
+  padding: 2rem 6rem;
+  text-align: left;
   font-weight: 700;
 `
-const Input = styled.input`
-  font: inherit;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 0 10px;
-  height: 40px;
+const Table = styled.table`
+  display: block;
   width: 100%;
+  margin-bottom: 1rem;
+  border-spacing: 0;
+  border-collapse: collapse;
+`
+const Tr = styled.tr`
+  display: block;
+  margin-top: 36px;
+  ${({theme}) => theme.breakpoint.md`
+    vertical-align: middle;
+    display: flex;
+  `}
+`
+const Th = styled.th`
+  font-size: 14px;
+  margin: 10px 0 12px;
+  display: block;
+  width: 100%;
+  ${({theme}) => theme.breakpoint.md`
+    width: 25%;
+  `}
+  :before {
+    content: "▪\\00a0\\00a0\\00a0\\00a0";
+    position: relative;
+    display: inline-block;
+    color: ${({theme}) => theme.colors.primary};
+  }
+`
+const Td = styled.td`
+  display: block;
+  width: 100%;
+  ${({theme}) => theme.breakpoint.md`
+    width: 60%;
+  `}
+`
+const Wrap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+const CatLabel = styled.label`
+  position: relative;
+  font-size: 12px;
+  width: 50%;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+`
+const Input = styled.input`
+  font-size: 14px;
+  font-weight: inherit;
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  color: #333;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
   border: none;
-  border-bottom: 1px solid ${({theme}) => theme.colors.gray};
 `
 const Textarea = styled.textarea`
-  font: inherit;
   font-size: 14px;
+  font-weight: inherit;
+  font-family: inherit;
+  color: #333;
   line-height: 1.8;
-  padding: 10px;
-  min-height: 48px;
+  letter-spacing: 0.05em;
   width: 100%;
+  padding: 10px;
   border: none;
-  border-bottom: 1px solid ${({theme}) => theme.colors.gray};
+  overflow: auto;
 `

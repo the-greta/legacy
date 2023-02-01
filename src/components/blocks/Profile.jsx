@@ -12,26 +12,26 @@ const Profile = () => {
           <Subtitle fontSize="14">회사 정보</Subtitle>
         </Wrap>
         <Context>
-          <table style={{overflow: "scroll"}}>
+          <Table style={{overflow: "scroll"}}>
             <tbody>
               <tr>
-                <th>회사명</th>
-                <td>주식회사 그레타</td>
+                <Th>회사명</Th>
+                <Td>주식회사 그레타</Td>
               </tr>
               <tr>
-                <th>소재지</th>
-                <td>서울특별시 중구 무교로 28, 시그너스빌딩 604호</td>
+                <Th>소재지</Th>
+                <Td>서울특별시 중구 무교로 28, 시그너스빌딩 604호</Td>
               </tr>
               <tr>
-                <th>설립일</th>
-                <td>2021년 11월 3일</td>
+                <Th>설립일</Th>
+                <Td>2021년 11월 3일</Td>
               </tr>
               <tr>
-                <th>사업자 등록번호</th>
-                <td>124-87-59303</td>
+                <Th>사업자 등록번호</Th>
+                <Td>124-87-59303</Td>
               </tr>
             </tbody>
-          </table>
+          </Table>
         </Context>
     </Container>
   );
@@ -65,4 +65,20 @@ const Context = styled.div`
     display: flex;
     gap: 3rem;
   `}
+`
+const Table = styled.table`
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+`
+const Th = styled.th`
+  padding: 1.5em 0;
+  border-bottom: 1px solid #999;
+  font-weight: 700;
+  width: 25%;
+`
+const Td = styled.td`
+  padding: 1.5em 0;
+  border-bottom: 1px solid #999;
+  width: 65%;
 `
