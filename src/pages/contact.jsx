@@ -39,6 +39,7 @@ const Container = styled.div`
   ${({theme}) => theme.breakpoint.md`
     gap: 5rem;
   `}
+  padding-bottom: 10rem;
 `
 const Underline = styled.div`
   height: 24px;

@@ -1,22 +1,36 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import gretaLogo from '../../../public/image/logo_gold.png'
+import gretaLogoGold from '../../../public/image/logo_gold.png'
+import gretaLogoWhite from '../../../public/image/logo_white.png'
 
 const Header = ({children}) => {
   const [showMobileNav, setShowMobileNav] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
+
+  const toggleVisibility = () => {
+    window.scrollY > 80
+    ? setIsVisible(true)
+    : setIsVisible(false)
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility)
+    return () => window.removeEventListener('scroll', toggleVisibility)
+  }, [])
+
   return (
-    <Container>
+    <Container isVisible={isVisible}>
       <Wrap isActive={showMobileNav}>
         <TopRow>
           <Logo href="/">
             <Image
-              src={gretaLogo}
+              src={isVisible? gretaLogoGold: gretaLogoWhite}
               alt="Greta Logo"
-              width={120}
-              height={30}
+              width={140}
+              height={50}
+              unoptimized={true}
               priority
             />
           </Logo>
@@ -51,8 +65,10 @@ const Container = styled.header`
   z-index: 1000;
   width: 100%;
   display: flex;
-  /* border-bottom: 1px solid ${({theme}) => theme.colors.gray}; */
-  /* background-color: #fff; */
+  color: ${props => props.isVisible? ({theme}) => theme.colors.black: ({theme}) => theme.colors.lightgray};
+  background: ${props => props.isVisible? "#fff": "transparent"};
+  filter: ${props => props.isVisible? "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))": "none"};
+  transition: background-color 0.5s ease
 `
 const TopRow = styled.div`
   width: 100%;
@@ -63,8 +79,8 @@ const TopRow = styled.div`
 const Wrap = styled(TopRow)`
   flex-direction: column;
   margin: 0 auto;
-  max-width: 1024px;
-  padding: 1rem 3rem 1.1rem;
+  max-width: 1200px;
+  padding: 0.8rem 3rem 1rem;
   gap: 1rem;
   ${({theme}) => theme.breakpoint.sm`
     flex-direction: row;
@@ -76,7 +92,7 @@ const Logo = styled(Link)`
 const Section = styled.section`
   display: ${props => props.isActive? 'flex': 'none'};
   flex-direction: column;
-  gap: 1.3rem;
+  gap: 2rem;
   padding: 1.2rem 1.5rem 1rem;
   width: 100%;
   ${({theme}) => theme.breakpoint.sm`

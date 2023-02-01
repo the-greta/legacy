@@ -6,8 +6,8 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
 import AppLink from '@/components/atoms/AppLink.jsx';
-import Footer from '@/components/atoms/Footer.jsx';
 import Header from '@/components/atoms/Header.jsx';
+import Footer from '@/components/blocks/Footer.jsx';
 import { theme } from '@/theme/theme';
 
 const inter = Inter({ subsets: ['latin'] })

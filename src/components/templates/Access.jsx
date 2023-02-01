@@ -25,7 +25,7 @@ export default Access;
 
 const Bg = styled.div`
   margin: 0 calc(50% - 50vw);
-  padding: 2.5rem calc(50vw - 50%) 3rem;
+  padding: 2.5rem calc(50vw - 50%) 10rem;
   background-color: ${({theme})=> theme.colors.lightgray};
 `
 const Container = styled.div`

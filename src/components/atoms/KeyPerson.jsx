@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const KeyPerson = (props) => {
+  const mailto = `mailto:${props.email}`
   return (
     <Container>
       <div style={{display: "flex", justifyContent: "space-between", alignItems: "end"}}>
@@ -9,11 +10,13 @@ const KeyPerson = (props) => {
         <Position>{props.position}</Position>
       </div>
       <Wrap>
-        <div>{props.dep}</div>
-        <div>{props.dep2}</div>
-        <div>
-          {props.email}
-        </div>
+        <p style={{margin: "0.2em 0"}}>
+          {props.dep}<br/>
+          {props.dep2}<br/>
+        </p>
+        <p style={{marginTop: "0.5em"}}>
+          <A href={mailto}>{props.email}</A><br/>
+        </p>
       </Wrap>
     </Container>
   );
@@ -31,9 +34,23 @@ const Name = styled.span`
 const Position = styled.span`
   font-size: 0.75rem;
   color: ${({theme})=> theme.colors.gray};
-  line-height: 1.5;
 `
 const Wrap = styled.div`
   padding-top: 0.4rem;
-  font-size: 0.875rem;
+`
+const A = styled.a`
+  text-decoration: none;
+  color: ${({theme}) => theme.colors.primary};
+  font-weight: 700;
+  :after {
+    content: "\\00a0→";
+    position: relative;
+    display: inline-block;
+    transition: transform .3s ease;
+  }
+  :hover {
+    :after {
+			transform: translateX(5px);
+    }
+  }
 `

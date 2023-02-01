@@ -20,6 +20,7 @@ const index = () => {
         <Slogan>
           그레타의 멋진 슬로건을 정해주세요.
         </Slogan>
+        {/* <ScrollArrow>SCROLL<br/>🢓</ScrollArrow> */}
         <Video autoPlay loop muted>
           <source src="/video/Line.mp4" type="video/mp4" />
         </Video>
@@ -75,7 +76,7 @@ const index = () => {
 export default index;
 
 const Container = styled.div`
-  padding: 3rem 0;
+  padding: 3rem 0 12rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -95,7 +96,22 @@ const Slogan = styled.h1`
   transform: translateY(-50%) translateX(-50%);
   color: #fff;
   text-shadow: 0 0 15px #666;
+  font-size: 4rem;
+  text-align: center;
 `
+// const ScrollArrow = styled.div`
+//   position: absolute;
+//   top: 90%;
+//   left: 50%;
+//   transform: translateY(-10%) translateX(-50%);
+//   color: #fff;
+//   text-shadow: 0 0 15px #666;
+//   font-size: 1.5rem;
+//   font-weight: 700;
+//   letter-spacing: 0.2em;
+//   text-transform: uppercase;
+//   text-align: center;
+// `
 const Video = styled.video`
   position: absolute;
   z-index: -1;
@@ -106,6 +122,7 @@ const Video = styled.video`
   height: 56.25vw;
   min-height: 100%;
   min-width: 100%;
+  filter: brightness(0.7);
 `
 const Wrap = styled.div`
   text-align: center;
