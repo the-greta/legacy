@@ -21,7 +21,7 @@ const Container = styled.div`
   position: relative;
   margin: -50px calc(50% - 50vw) 0;
   width: 100vw;
-  height: 50vh;
+  height: 667px;
   overflow: hidden;
 `;
 const Slogan = styled.div`

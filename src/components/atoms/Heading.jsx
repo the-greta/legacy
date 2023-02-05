@@ -12,7 +12,7 @@ const Heading = (props) => {
         sizes="100vw"
         fill
         placeholder="blur"
-        style={{ objectFit: "cover", zIndex: -1, filter: "brightness(0.5)" }}
+        style={{ objectFit: "cover", zIndex: -1, filter: "brightness(0.7)" }}
       />
       <h1 style={{ marginBottom: 0 }}>{props.heading.title}</h1>
       <div>{props.heading.subtitle}</div>
