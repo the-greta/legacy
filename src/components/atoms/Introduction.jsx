@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const Introduction = () => {
+const Introduction = (props) => {
   return (
     <Container>
       <Title>
-        <h2>about us</h2>
+        <h2 style={{ marginTop: 0 }}>{props.title}</h2>
       </Title>
-      <Context>hello, we are greta</Context>
+      <Context>{props.children}</Context>
     </Container>
   );
 };

@@ -4,10 +4,11 @@ export const colors = {
 
   darkgray: "#6e6e6e",
   gray: "#999",
-  lightgray: '#f5f5f5',
+  lightgray: "#f5f5f5",
 
   primary: "#123150",
   secondary: "#081827",
+  background: "#d0d6dc",
 };
 
 export const lightThemeColors = {

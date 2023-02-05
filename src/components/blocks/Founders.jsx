@@ -8,11 +8,9 @@ const Founders = (props) => {
     <Container>
       <h2>공동대표</h2>
       <Wrap>
-        <Context>
-          {props.information.map((info, i) => (
-            <KeyPerson key={i} info={info} />
-          ))}
-        </Context>
+        {props.information.map((info, i) => (
+          <KeyPerson key={i} info={info} />
+        ))}
       </Wrap>
     </Container>
   );
@@ -21,9 +19,9 @@ const Founders = (props) => {
 export default Founders;
 
 const Container = styled.div``;
-const Wrap = styled.div``;
-const Context = styled.div`
+const Wrap = styled.div`
   justify-content: flex-start;
   display: flex;
   gap: 2rem;
+  display: flex;
 `;

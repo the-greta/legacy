@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Map = (props) => {
   const latitude = props.latitude;
   const longitude = props.longitude;
+
   useEffect(() => {
     const mapScript = document.createElement("script");
     mapScript.async = true;
@@ -32,6 +33,7 @@ const Map = (props) => {
 
     return () => mapScript.removeEventListener("load", onLoadKakaoMap);
   }, [latitude, longitude]);
+
   return <Container id="map" />;
 };
 

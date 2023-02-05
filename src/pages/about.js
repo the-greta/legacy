@@ -3,7 +3,13 @@ import styled from "styled-components";
 
 import Heading from "@/components/atoms/Heading";
 import Profile from "@/components/atoms/Profile";
+import Access from "@/components/blocks/Access";
 import Founders from "@/components/blocks/Founders";
+
+const heading = {
+  title: "회사소개",
+  subtitle: "회사소개입니다.",
+};
 
 const information = [
   {
@@ -24,12 +30,18 @@ const information = [
 const about = () => {
   return (
     <Container>
-      <Heading></Heading>
+      <Heading heading={heading} />
       <Wrap>
+        <div />
         <Profile />
         <Founders information={information} />
+        <div />
       </Wrap>
-      <div>locations</div>
+      <Bg>
+        <Wrap>
+          <Access />
+        </Wrap>
+      </Bg>
     </Container>
   );
 };
@@ -43,4 +55,8 @@ const Wrap = styled.div`
   gap: 3rem;
   max-width: 1024px;
   margin: 0 auto;
+`;
+const Bg = styled.div`
+  background: lightblue;
+  padding: 3rem 0;
 `;

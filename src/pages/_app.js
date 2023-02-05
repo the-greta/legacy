@@ -10,6 +10,7 @@ import { theme } from "@/theme/theme";
 const navigation = [
   { name: "home", href: "/" },
   { name: "about", href: "/about" },
+  { name: "synthetic", href: "/business/synthetic-data-algorithm" },
   { name: "contact", href: "/contact" },
 ];
 
@@ -26,7 +27,8 @@ export default function App({ Component, pageProps }) {
 }
 
 const Container = styled.div`
-  min-height: calc(100vh - 180px);
+  min-height: calc(100vh - 200px);
   position: relative;
   padding: 50px 0 150px;
+  overflow: hidden;
 `;

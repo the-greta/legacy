@@ -13,6 +13,10 @@ const Profile = () => {
               <Td>주식회사 그레타</Td>
             </tr>
             <tr>
+              <Th>공동대표</Th>
+              <Td>김현태, 임종호</Td>
+            </tr>
+            <tr>
               <Th>소재지</Th>
               <Td>서울특별시 중구 무교로 28, 시그너스빌딩 604호</Td>
             </tr>
@@ -23,6 +27,14 @@ const Profile = () => {
             <tr>
               <Th>사업자 등록번호</Th>
               <Td>124-87-59303</Td>
+            </tr>
+            <tr>
+              <Th>연락처</Th>
+              <Td>
+                (전화) +82-70-8648-1024
+                <br />
+                (메일) the-greta@greta.com
+              </Td>
             </tr>
           </tbody>
         </Table>
@@ -45,6 +57,7 @@ const Th = styled.th`
   border-bottom: 1px solid #999;
   font-weight: 700;
   width: 25%;
+  vertical-align: top;
 `;
 const Td = styled.td`
   padding: 1.5em 0;
