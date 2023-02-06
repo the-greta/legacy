@@ -30,4 +30,5 @@ const Wrap = styled.div`
   gap: 3rem;
   max-width: 38rem;
   margin: 0 auto;
+  padding: 0 2rem;
 `;

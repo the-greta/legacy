@@ -3,16 +3,17 @@ import styled from "styled-components";
 
 import Introduction from "@/components/atoms/Introduction";
 import BusinessCards from "@/components/blocks/BusinessCards";
-import HeroSection from "@/components/blocks/HeroSection";
 import Partners from "@/components/blocks/Partners";
 
 import dataConsulting from "../../public/image/business_consulting.jpg";
+import dataPlatform from "../../public/image/business_platform.jpg";
+import dataSynthetic from "../../public/image/business_synthetic.jpg";
 
 const hero = { title: "그레타 슬로건", subtitle: "부연설명" };
 const businesses = [
   {
     name: "합성/재현 데이터 알고리즘",
-    src: dataConsulting,
+    src: dataSynthetic,
     desc: "대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다.",
   },
   {
@@ -22,7 +23,7 @@ const businesses = [
   },
   {
     name: "데이터 플랫폼 구축",
-    src: dataConsulting,
+    src: dataPlatform,
     desc: "대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다.",
   },
 ];
@@ -30,7 +31,7 @@ const businesses = [
 const index = () => {
   return (
     <Container>
-      <HeroSection hero={hero} />
+      {/* <HeroSection hero={hero} /> */}
       <Wrap>
         <div />
         <Introduction title="the Great Era of Data">

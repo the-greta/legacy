@@ -6,7 +6,7 @@ import BusinessCard from "@/components/atoms/BusinessCard";
 const BusinessCards = (props) => {
   return (
     <Container>
-      <h2>Business</h2>
+      <h2>사업분야</h2>
       <Wrap>
         {props.businesses.map((business, i) => (
           <BusinessCard

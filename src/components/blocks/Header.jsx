@@ -1,15 +1,26 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
 import AppLink from "@/components/atoms/AppLink";
 
+import gretaLogoGold from "../../../public/image/LOGO_GOLD.png";
+
 const Header = (props) => {
   return (
     <Container>
       <Nav>
-        <div>
-          <b>GRETA</b>
-        </div>
+        <Link href="/">
+          <Image
+            src={gretaLogoGold}
+            alt="Greta Logo"
+            width={140}
+            height={50}
+            unoptimized={true}
+            priority
+          />
+        </Link>
         <NavSection>
           {props.navigation.map((nav, i) => (
             <AppLink key={i} href={nav.href}>

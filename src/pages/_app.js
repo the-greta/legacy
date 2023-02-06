@@ -1,5 +1,6 @@
 import "@/styles/style.css";
 
+import { Inter } from "@next/font/google";
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
@@ -7,6 +8,7 @@ import Footer from "@/components/blocks/Footer";
 import Header from "@/components/blocks/Header";
 import { theme } from "@/theme/theme";
 
+const inter = Inter({ subsets: ["latin"] });
 const navigation = [
   { name: "home", href: "/" },
   { name: "about", href: "/about" },
@@ -17,11 +19,13 @@ const navigation = [
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Header navigation={navigation} />
-      <Container>
-        <Component {...pageProps} />
-        <Footer />
-      </Container>
+      <div className={inter.className}>
+        <Header navigation={navigation} />
+        <Container>
+          <Component {...pageProps} />
+          <Footer />
+        </Container>
+      </div>
     </ThemeProvider>
   );
 }

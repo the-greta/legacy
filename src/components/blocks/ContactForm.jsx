@@ -9,7 +9,6 @@ const ContactForm = () => {
     <Container>
       <div>
         <p>필수 입력 사항을 작성한 뒤 문의하기 버튼을 눌러 주세요.</p>
-        <TelSpan>+82-70-8648-1024</TelSpan>
       </div>
       <Form method="POST" action={spread}>
         <div>
@@ -57,11 +56,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-`;
-const TelSpan = styled.div`
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding: 0 1rem;
 `;
 const Form = styled.form``;
 const Label = styled.label`

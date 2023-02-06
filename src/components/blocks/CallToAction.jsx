@@ -15,7 +15,7 @@ const CallToAction = () => {
       <Wrap>
         <ButtonWrap>
           <Button onClick={handleClick} styleType="contact">
-            contact
+            Contact
           </Button>
         </ButtonWrap>
       </Wrap>
@@ -26,22 +26,15 @@ const CallToAction = () => {
 export default CallToAction;
 
 const Container = styled.div`
-  background: #123150;
+  background: ${({ theme }) => theme.colors.secondary};
 `;
 const Wrap = styled.div`
-  padding: 3rem 2rem;
+  padding: 1rem 2rem 0.5rem;
   text-align: center;
   display: flex;
 `;
-const SubDiv = styled.div`
-  font-size: 0.75rem;
-  vertical-align: middle;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 const ButtonWrap = styled.div`
-  padding: 1rem 0 1.5rem;
+  padding: 1rem 2rem 0;
   max-width: 38rem;
   margin: 0 auto;
   width: 100%;

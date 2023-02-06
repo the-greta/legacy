@@ -47,22 +47,12 @@ const SyntheticDataAlgorithm = () => {
             분석이 가능합니다.
           </p>
           <p>
-            다음과 같은 상황에서 활용할 수 있습니다.
-            <ul>
-              <li>노출 위험으로 인해 원데이터를 그대로 공개하기 어려운 경우</li>
-              <li>
-                샘플 크기가 너무 작거나 관측된 사례가 없는 상태에서 데이터
-                모형/알고리즘 학습이 필요한 경우
-              </li>
-              <li>
-                선택 편향(Selection Match) 등 데이터 편향으로 인해 데이터 보정이
-                필요한 경우
-              </li>
-              <li>
-                데이터 결합 과정에서 매칭이 되지 않은 케이스에 대한 정보를
-                생성하려는 경우
-              </li>
-            </ul>
+            다음과 같은 상황에서 활용할 수 있습니다. 노출 위험으로 인해
+            원데이터를 그대로 공개하기 어려운 경우 샘플 크기가 너무 작거나
+            관측된 사례가 없는 상태에서 데이터 모형/알고리즘 학습이 필요한 경우
+            선택 편향(Selection Match) 등 데이터 편향으로 인해 데이터 보정이
+            필요한 경우 데이터 결합 과정에서 매칭이 되지 않은 케이스에 대한
+            정보를 생성하려는 경우
           </p>
         </Introduction>
         <div />
@@ -89,6 +79,7 @@ const Wrap = styled.div`
   gap: 3rem;
   max-width: 1024px;
   margin: 0 auto;
+  padding: 0 2rem;
 `;
 const Bg = styled.div`
   background: lightblue;

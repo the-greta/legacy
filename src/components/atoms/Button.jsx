@@ -18,13 +18,14 @@ const ButtonSecondary = styled(BaseButton)`
   background: ${({ theme }) => theme.colors.secondary};
 `;
 const ButtonContact = styled(BaseButton)`
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.secondary};
   border: 2px solid white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
+  letter-spacing: 0.24em;
   :hover {
     background: white;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.secondary};
   }
 `;
 const buttonStyleLists = {
