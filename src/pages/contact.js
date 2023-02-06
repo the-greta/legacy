@@ -13,6 +13,7 @@ const contact = () => {
     <Container>
       <Heading heading={heading} />
       <Wrap>
+        <div />
         <ContactForm />
         <div />
       </Wrap>

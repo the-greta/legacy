@@ -2,18 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 import AppLink from "@/components/atoms/AppLink";
-import CallToAction from "@/components/blocks/CallToAction";
 
 const Footer = () => {
   return (
     <Container>
-      <CallToAction />
       <Wrap>
         <div>
           <b>© GRETA Inc. All right reserved</b>
         </div>
         <AppLink href="/">법적고지</AppLink>
         <AppLink href="/">개인정보처리방침</AppLink>
+        <AppLink href="/contact">문의상담</AppLink>
         <AppLink href="/">인재채용</AppLink>
       </Wrap>
     </Container>
@@ -34,6 +33,7 @@ const Wrap = styled.footer`
   gap: 2rem;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   color: lightgray;
+  font-size: 0.75rem;
 `;

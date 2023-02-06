@@ -25,7 +25,10 @@ const Container = styled.div`
 `;
 const Wrap = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
   gap: 2rem;
+  /* background: lightgray; */
+  padding: 2rem;
+  border: 1px solid lightgray;
 `;

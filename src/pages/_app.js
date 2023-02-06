@@ -27,8 +27,8 @@ export default function App({ Component, pageProps }) {
 }
 
 const Container = styled.div`
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 450px);
   position: relative;
-  padding: 50px 0 150px;
+  padding: 50px 0 400px;
   overflow: hidden;
 `;

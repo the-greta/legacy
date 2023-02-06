@@ -11,6 +11,7 @@ const HeroSection = (props) => {
       <Video autoPlay loop muted>
         <source src="/video/Line.mp4" type="video/mp4" />
       </Video>
+      <div>hi</div>
     </Container>
   );
 };
@@ -21,7 +22,7 @@ const Container = styled.div`
   position: relative;
   margin: -50px calc(50% - 50vw) 0;
   width: 100vw;
-  height: 667px;
+  height: 923px;
   overflow: hidden;
 `;
 const Slogan = styled.div`

@@ -1,10 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
+const spread =
+  "https://script.google.com/macros/s/AKfycbxta0bx09oLq-c3FrSA8-3xrXJaT5_I0Mk-KLUZJrtjLYunUjGWtRTCgfsovzDqRYljMA/exec";
+
 const ContactForm = () => {
   return (
-    <>
-      <Form>
+    <Container>
+      <div>
+        <p>필수 입력 사항을 작성한 뒤 문의하기 버튼을 눌러 주세요.</p>
+        <TelSpan>+82-70-8648-1024</TelSpan>
+      </div>
+      <Form method="POST" action={spread}>
         <div>
           <Label>문의종류</Label>
           <CheckboxWrap>
@@ -40,15 +47,23 @@ const ContactForm = () => {
         </div>
         <button type="submit">submit</button>
       </Form>
-    </>
+    </Container>
   );
 };
 
 export default ContactForm;
 
-const Form = styled.form`
-  padding: 2rem 0;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
+const TelSpan = styled.div`
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0 1rem;
+`;
+const Form = styled.form``;
 const Label = styled.label`
   display: block;
   font-weight: 700;

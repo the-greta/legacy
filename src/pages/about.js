@@ -57,6 +57,6 @@ const Wrap = styled.div`
   margin: 0 auto;
 `;
 const Bg = styled.div`
-  background: lightblue;
+  /* background: lightblue; */
   padding: 3rem 0;
 `;

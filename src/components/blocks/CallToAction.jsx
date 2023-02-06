@@ -1,14 +1,23 @@
+import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
-import AppLink from "@/components/atoms/AppLink";
+import Button from "@/components/atoms/Button";
 
 const CallToAction = () => {
+  const router = useRouter();
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push("/contact");
+  };
   return (
     <Container>
       <Wrap>
-        <div>국무위원은 국무총리의 제청으로 대통령이 임명한다.</div>
-        <AppLink href="/">Contact</AppLink>
+        <ButtonWrap>
+          <Button onClick={handleClick} styleType="contact">
+            contact
+          </Button>
+        </ButtonWrap>
       </Wrap>
     </Container>
   );
@@ -20,9 +29,20 @@ const Container = styled.div`
   background: #123150;
 `;
 const Wrap = styled.div`
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
+  text-align: center;
   display: flex;
-  justify-content: space-between;
+`;
+const SubDiv = styled.div`
+  font-size: 0.75rem;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const ButtonWrap = styled.div`
+  padding: 1rem 0 1.5rem;
+  max-width: 38rem;
+  margin: 0 auto;
+  width: 100%;
 `;
