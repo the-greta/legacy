@@ -18,7 +18,7 @@ export default ServiceCard;
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   border: 1px solid lightgray;
   margin: -1px 0;
 `;

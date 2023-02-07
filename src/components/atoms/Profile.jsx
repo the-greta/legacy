@@ -50,7 +50,7 @@ export default Profile;
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+  gap: 3rem;
 `;
 const Table = styled.table`
   margin-top: 2.5rem;
@@ -60,13 +60,13 @@ const Table = styled.table`
 `;
 const Th = styled.th`
   padding: 1.5em 0;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid lightgray;
   font-weight: 700;
   width: 30%;
   vertical-align: top;
 `;
 const Td = styled.td`
   padding: 1.5em 0;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid lightgray;
   width: 75%;
 `;

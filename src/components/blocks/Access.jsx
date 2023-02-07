@@ -8,16 +8,24 @@ import Title from "@/components/atoms/Title";
 const Access = () => {
   return (
     <Container>
-      <Title sub="Lorem Ipsum">Lorem Ipsum</Title>
+      <Title sub="Access">찾아오시는 길</Title>
       <Grid>
         <Map latitude="37.5684945" longitude="126.9795985" />
         <Wrap>
           <div>
-            <h3>Lorem Ipsum</h3>
-            <div>There is no one who loves pain itself</div>
+            <div
+              style={{
+                fontSize: "1.125rem",
+                fontWeight: "700",
+                marginBottom: "0.5em",
+              }}
+            >
+              소재지 정보
+            </div>
+            <div>서울특별시 중구 무교로 28, 시그너스빌딩 604호</div>
           </div>
           <Placeholder>
-            <h2>There is no one who loves pain itself</h2>
+            <h3>There is no one who loves pain itself</h3>
             <div>
               <Button styleType="secondary">button</Button>
             </div>

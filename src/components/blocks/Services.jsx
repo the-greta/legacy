@@ -7,7 +7,7 @@ import Title from "@/components/atoms/Title";
 const Services = (props) => {
   return (
     <Container id="services">
-      <Title sub="">What We Do?</Title>
+      <Title sub="Services">What We Do?</Title>
       <Wrap>
         {props.services.map((service, i) => (
           <ServiceCard key={i} name={service.name} desc={service.desc} />

@@ -6,8 +6,8 @@ import Access from "@/components/blocks/Access";
 import Founders from "@/components/blocks/Founders";
 
 const profileInfo = {
-  title: "Lorem Ipsum",
-  subtitle: "Lorem Ipsum",
+  title: "기업 정보",
+  subtitle: "About Us",
   desc: "Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
 };
 const information = [

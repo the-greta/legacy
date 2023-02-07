@@ -13,7 +13,7 @@ const HeroSection = (props) => {
           <Title sub={props.hero.subtitle}>{props.hero.title}</Title>
           {props.children}
           <Wrap>
-            <Scroll to="contact" smooth={true} duration={600}>
+            <Scroll to="contact" smooth={true} duration={600} offset={-120}>
               <Button styleType="primary">primary</Button>
             </Scroll>
             <Scroll to="services" smooth={true} duration={600} offset={-120}>

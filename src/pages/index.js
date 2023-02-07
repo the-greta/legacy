@@ -11,7 +11,7 @@ import dataSynthetic from "../../public/image/business_synthetic.jpg";
 
 const hero = {
   title: "There is no one who loves pain itself, because it is pain",
-  subtitle: "Lorem Ipsum",
+  subtitle: "Welcome",
 };
 const services = [
   {

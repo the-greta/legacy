@@ -20,6 +20,7 @@ const LinkText = styled(Link)`
   color: inherit;
   font-weight: 700;
   transition: 0.3s ease;
+  text-transform: capitalize;
   :hover {
     opacity: 0.6;
   }

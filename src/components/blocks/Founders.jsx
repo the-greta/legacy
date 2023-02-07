@@ -7,7 +7,7 @@ import Title from "@/components/atoms/Title";
 const Founders = (props) => {
   return (
     <Container>
-      <Title sub="Lorem Ipsum">Lorem Ipsum</Title>
+      <Title sub="Founders">공동대표</Title>
       <Wrap>
         {props.information.map((info, i) => (
           <KeyPerson key={i} info={info} />

@@ -67,7 +67,8 @@ const Wrap = styled.div`
   justify-content: center;
   gap: 1rem;
   padding: 1.5rem 0;
-  border-top: 0.5px solid gray;
+  border-top: 0.5px solid lightgray;
   color: white;
+  opacity: 0.7;
 `;
 const Copyright = styled.span``;

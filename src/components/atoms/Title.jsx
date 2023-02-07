@@ -6,8 +6,8 @@ const Title = (props) => {
   const desc = props.desc ? props.desc : null;
   return (
     <Conatiner>
-      <sub>{sub}</sub>
-      <h1>{props.children}</h1>
+      <Subtitle>{sub}</Subtitle>
+      <h2>{props.children}</h2>
       <p>{desc}</p>
     </Conatiner>
   );
@@ -17,4 +17,8 @@ export default Title;
 
 const Conatiner = styled.div`
   text-transform: capitalize;
+`;
+const Subtitle = styled.sub`
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.primary700};
 `;
