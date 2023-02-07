@@ -26,8 +26,9 @@ export default Heading2;
 
 const Container = styled.div`
   width: 100%;
-  height: 667px;
-  padding: 2rem 0 4rem;
+  margin: 0 calc(50% - 50vw);
+  padding: 0 calc(50vw - 50%);
+  height: 933px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -6,9 +6,8 @@ export const colors = {
   gray: "#999",
   lightgray: "#f5f5f5",
 
-  primary: "#123150",
-  secondary: "#081827",
-  background: "#d0d6dc",
+  primary: "#cf9f52",
+  secondary: "#000",
 };
 
 export const lightThemeColors = {

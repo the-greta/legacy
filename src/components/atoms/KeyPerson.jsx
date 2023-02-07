@@ -6,28 +6,16 @@ const KeyPerson = (props) => {
 
   return (
     <Container>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "end",
-          gap: "1rem",
-        }}
-      >
-        <div style={{ fontWeight: 700 }}>{props.info.name}</div>
-        <Position>{props.info.position}</Position>
-      </div>
-      <Wrap>
-        <p style={{ margin: "0.2em 0" }}>
-          {props.info.dep}
-          <br />
-          {props.info.dep2}
-          <br />
-        </p>
-        <div style={{ marginTop: "0.5em" }}>
-          <A href={mailto}>{props.info.email}</A>
-          <br />
-        </div>
-      </Wrap>
+      <h3>{props.info.name}</h3>
+      <sub>{props.info.position}</sub>
+      <Context>
+        {props.info.dep}
+        <br />
+        {props.info.dep2}
+      </Context>
+      <Context>
+        <A href={mailto}>{props.info.email}</A>
+      </Context>
     </Container>
   );
 };
@@ -36,16 +24,13 @@ export default KeyPerson;
 
 const Container = styled.div`
   width: 100%;
+  height: 300px;
   border: 1px solid ${({ theme }) => theme.colors.lightgray};
-  border-radius: 10px;
-  padding: 1rem;
+  padding: 2rem 3rem;
+  background: white;
 `;
-const Position = styled.span`
-  font-size: 0.75rem;
-  color: ${({ theme }) => theme.colors.gray};
-`;
-const Wrap = styled.div`
-  padding-top: 0.4rem;
+const Context = styled.p`
+  font-size: 0.875rem;
 `;
 const A = styled.a`
   text-decoration: none;

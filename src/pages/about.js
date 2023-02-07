@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import Heading from "@/components/atoms/Heading";
 import Profile from "@/components/atoms/Profile";
 import Access from "@/components/blocks/Access";
 import Founders from "@/components/blocks/Founders";
 
-const heading = {
-  title: "회사소개",
-  subtitle: "회사소개입니다.",
+const profileInfo = {
+  title: "Lorem Ipsum",
+  subtitle: "Lorem Ipsum",
+  desc: "Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
 };
-
 const information = [
   {
     name: "김현태",
@@ -30,18 +29,15 @@ const information = [
 const about = () => {
   return (
     <Container>
-      <Heading heading={heading} />
       <Wrap>
         <div />
-        <Profile />
-        <Founders information={information} />
+        <Profile profileInfo={profileInfo} />
+        <Bg>
+          <Founders information={information} />
+        </Bg>
+        <Access />
         <div />
       </Wrap>
-      <Bg>
-        <Wrap>
-          <Access />
-        </Wrap>
-      </Bg>
     </Container>
   );
 };
@@ -52,12 +48,13 @@ const Container = styled.div``;
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 120px;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 `;
 const Bg = styled.div`
-  /* background: lightblue; */
-  padding: 3rem 0;
+  background: gray;
+  margin: 0 calc(50% - 50vw);
+  padding: 120px calc(50vw - 50%);
 `;

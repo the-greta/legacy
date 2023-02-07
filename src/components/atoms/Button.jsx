@@ -4,11 +4,11 @@ import styled from "styled-components";
 const BaseButton = styled.button`
   text-align: center;
   color: white;
-  width: 100%;
   min-width: 100px;
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
   font-weight: 700;
   transition: 0.1s;
+  border: 1px solid transparent;
   cursor: pointer;
 `;
 const ButtonPrimary = styled(BaseButton)`

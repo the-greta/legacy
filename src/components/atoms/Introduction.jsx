@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import Title from "@/components/atoms/Title";
+
 const Introduction = (props) => {
   return (
     <Container>
@@ -21,10 +23,6 @@ const Container = styled.div`
 const Col = styled.div`
   display: flex;
   flex-direction: column;
-`;
-const Title = styled(Col)`
-  flex: 1;
-  font-weight: 700;
 `;
 const Context = styled(Col)`
   flex: 3;

@@ -40,18 +40,19 @@ const Container = styled.div`
   top: 0;
   width: 100%;
   z-index: ${({ theme }) => theme.zindex.header};
-  background: white;
-  opacity: 0.8;
+  height: 70px;
 `;
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
-  margin: 0 auto;
+  padding: 0 2rem;
+  margin: auto;
+  height: 100%;
+  max-width: 1200px;
 `;
 const NavSection = styled.section`
   width: fit-content;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 `;

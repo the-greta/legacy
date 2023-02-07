@@ -12,17 +12,19 @@ const inter = Inter({ subsets: ["latin"] });
 const navigation = [
   { name: "home", href: "/" },
   { name: "about", href: "/about" },
-  { name: "synthetic", href: "/business/synthetic-data-algorithm" },
-  { name: "contact", href: "/contact" },
+  { name: "careers", href: "/" },
 ];
 
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <div className={inter.className}>
+      {/* <div className={inter.className}> */}
+      <div>
         <Header navigation={navigation} />
         <Container>
-          <Component {...pageProps} />
+          <Main>
+            <Component {...pageProps} />
+          </Main>
           <Footer />
         </Container>
       </div>
@@ -31,8 +33,11 @@ export default function App({ Component, pageProps }) {
 }
 
 const Container = styled.div`
-  min-height: calc(100vh - 450px);
   position: relative;
-  padding: 50px 0 400px;
-  overflow: hidden;
+  min-height: 100vh;
+`;
+const Main = styled.main`
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 70px 2rem 250px;
 `;

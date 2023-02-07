@@ -6,13 +6,11 @@ import styled from "styled-components";
 import AppLink from "@/components/atoms/AppLink";
 
 import gretaLogoWhite from "../../../public/image/LOGO_WHITE.png";
-import CallToAction from "./CallToAction";
 
 const Footer = () => {
   return (
     <Container>
-      <CallToAction />
-      <Wrap>
+      <Nav>
         <Link href="/">
           <Image
             src={gretaLogoWhite}
@@ -23,17 +21,18 @@ const Footer = () => {
             priority
           />
         </Link>
-        <Nav>
-          <NavContent>
-            <AppLink href="/">회사소개</AppLink>
-            <AppLink href="/">합성/재현데이터</AppLink>
-            <AppLink href="/">인재채용</AppLink>
-          </NavContent>
-          <NavContent style={{ fontSize: "0.625rem" }}>
-            <AppLink href="/">개인정보처리방침</AppLink>
-            <Copyright>© GRETA Inc. All rights reserved</Copyright>
-          </NavContent>
-        </Nav>
+        <NavSection>
+          <AppLink href="/">회사소개</AppLink>
+          <AppLink href="/">합성/재현데이터</AppLink>
+          <AppLink href="/">인재채용</AppLink>
+        </NavSection>
+        <div />
+      </Nav>
+      <Wrap>
+        <div />
+        <Copyright>© GRETA Inc. — All rights reserved</Copyright>
+        <AppLink href="/">개인정보처리방침</AppLink>
+        <AppLink href="/">법적고지</AppLink>
       </Wrap>
     </Container>
   );
@@ -41,34 +40,34 @@ const Footer = () => {
 
 export default Footer;
 
-const Container = styled.div`
+const Container = styled.footer`
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: ${({ theme }) => theme.colors.secondary};
-  color: white;
-`;
-const Wrap = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 2rem;
-  color: white;
+  background: black;
   font-size: 0.75rem;
-`;
-const Copyright = styled.span`
-  font-weight: 600;
-  letter-spacing: 0.1em;
 `;
 const Nav = styled.nav`
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 0 2.5rem;
+  margin: auto;
+  height: 100%;
+  max-width: 1024px;
+  color: white;
 `;
-const NavContent = styled.div`
+const NavSection = styled.div`
   display: flex;
   gap: 2rem;
   justify-content: end;
 `;
+const Wrap = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-top: 0.5px solid gray;
+  color: white;
+`;
+const Copyright = styled.span``;

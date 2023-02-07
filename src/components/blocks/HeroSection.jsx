@@ -1,17 +1,28 @@
 import React from "react";
+import { Link as Scroll } from "react-scroll";
 import styled from "styled-components";
+
+import Button from "@/components/atoms/Button";
+import Title from "@/components/atoms/Title";
 
 const HeroSection = (props) => {
   return (
     <Container>
-      <Slogan>
-        <h1 style={{ marginBottom: 0 }}>{props.hero.title}</h1>
-        <div>{props.hero.subtitle}</div>
-      </Slogan>
-      <Video autoPlay loop muted>
-        <source src="/video/Line.mp4" type="video/mp4" />
-      </Video>
-      <div>hi</div>
+      <Col>
+        <Title sub={props.hero.subtitle}>{props.hero.title}</Title>
+        {props.children}
+        <Wrap>
+          <Scroll to="contact" smooth={true} duration={600}>
+            <Button styleType="primary">primary</Button>
+          </Scroll>
+          <Scroll to="services" smooth={true} duration={600} offset={-120}>
+            <Button styleType="secondary">secondary</Button>
+          </Scroll>
+        </Wrap>
+      </Col>
+      <Col>
+        <Placeholder />
+      </Col>
     </Container>
   );
 };
@@ -19,30 +30,25 @@ const HeroSection = (props) => {
 export default HeroSection;
 
 const Container = styled.div`
-  position: relative;
-  margin: -50px calc(50% - 50vw) 0;
-  width: 100vw;
-  height: 923px;
-  overflow: hidden;
+  height: calc(933px - 72px);
+  display: flex;
+  gap: 1rem;
 `;
-const Slogan = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translateY(-50%) translateX(-50%);
-  color: #fff;
-  text-shadow: 0 0 15px #666;
-  text-align: left;
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 `;
-const Video = styled.video`
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 177.77777778vh;
-  height: 56.25vw;
-  min-height: 100%;
-  min-width: 100%;
-  filter: brightness(0.7);
+const Col = styled.div`
+  flex: 1;
+  margin: 15% 0 auto;
+`;
+const Wrap = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+`;
+const Placeholder = styled.div`
+  background: gray;
+  height: 400px;
 `;
