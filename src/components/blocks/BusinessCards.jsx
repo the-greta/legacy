@@ -30,5 +30,5 @@ const Container = styled.div`
 const Wrap = styled.div`
   width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 `;

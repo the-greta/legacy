@@ -13,8 +13,18 @@ const BusinessCard = (props) => {
         height={1280}
         style={{ width: "100%", height: "auto" }}
       />
-      <h3>{props.name}</h3>
-      <div>{props.desc}</div>
+      <div
+        style={{
+          marginTop: "-70px",
+          background: "white",
+          zIndex: 1,
+          position: "relative",
+          width: "70%",
+        }}
+      >
+        <h3>{props.name}</h3>
+        <div>{props.desc}</div>
+      </div>
     </Container>
   );
 };

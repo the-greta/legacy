@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import Heading2 from "@/components/atoms/Heading2";
 import Introduction from "@/components/atoms/Introduction";
 import BusinessCards from "@/components/blocks/BusinessCards";
 import Partners from "@/components/blocks/Partners";
@@ -27,14 +28,20 @@ const businesses = [
     desc: "대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다.",
   },
 ];
-
+const introTitle = (
+  <p>
+    We are Living
+    <br />
+    in the Great Era of Data.
+  </p>
+);
 const index = () => {
   return (
     <Container>
-      {/* <HeroSection hero={hero} /> */}
+      <Heading2 />
       <Wrap>
         <div />
-        <Introduction title="the Great Era of Data">
+        <Introduction title={introTitle}>
           <p>
             GRETA는 전문 인력과 기술력을 바탕으로 High-End 데이터 솔루션을
             제공합니다.
