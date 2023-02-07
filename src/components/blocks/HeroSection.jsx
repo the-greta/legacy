@@ -8,21 +8,21 @@ import Title from "@/components/atoms/Title";
 const HeroSection = (props) => {
   return (
     <Container>
-      <Col>
-        <Title sub={props.hero.subtitle}>{props.hero.title}</Title>
-        {props.children}
-        <Wrap>
-          <Scroll to="contact" smooth={true} duration={600}>
-            <Button styleType="primary">primary</Button>
-          </Scroll>
-          <Scroll to="services" smooth={true} duration={600} offset={-120}>
-            <Button styleType="secondary">secondary</Button>
-          </Scroll>
-        </Wrap>
-      </Col>
-      <Col>
+      <Grid>
+        <div>
+          <Title sub={props.hero.subtitle}>{props.hero.title}</Title>
+          {props.children}
+          <Wrap>
+            <Scroll to="contact" smooth={true} duration={600}>
+              <Button styleType="primary">primary</Button>
+            </Scroll>
+            <Scroll to="services" smooth={true} duration={600} offset={-120}>
+              <Button styleType="secondary">secondary</Button>
+            </Scroll>
+          </Wrap>
+        </div>
         <Placeholder />
-      </Col>
+      </Grid>
     </Container>
   );
 };
@@ -38,9 +38,6 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-`;
-const Col = styled.div`
-  flex: 1;
   margin: 15% 0 auto;
 `;
 const Wrap = styled.div`
