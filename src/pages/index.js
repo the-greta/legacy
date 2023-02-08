@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
@@ -32,23 +33,27 @@ const services = [
 ];
 const index = () => {
   return (
-    <Container>
-      <HeroSection hero={hero}>
-        <p>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <Container>
+        <HeroSection hero={hero}>
           Lorem Ipsum has been the industrys standard dummy text ever since the
           1500s, when an unknown printer took a galley of type and scrambled it
           to make a type specimen book.
-        </p>
-      </HeroSection>
-      <hr />
-      <Wrap>
-        <div />
-        <Services services={services} />
-        <div />
-        <Contact />
-        <div />
-      </Wrap>
-    </Container>
+        </HeroSection>
+        <hr />
+        <Wrap>
+          <div />
+          <Services services={services} />
+          <div />
+          <Contact />
+          <div />
+        </Wrap>
+      </Container>
+    </motion.div>
   );
 };
 

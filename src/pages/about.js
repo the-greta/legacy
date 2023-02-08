@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
@@ -28,17 +29,23 @@ const information = [
 ];
 const about = () => {
   return (
-    <Container>
-      <Wrap>
-        <div />
-        <Profile profileInfo={profileInfo} />
-        <Bg>
-          <Founders information={information} />
-        </Bg>
-        <Access />
-        <div />
-      </Wrap>
-    </Container>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <Container>
+        <Wrap>
+          <div />
+          <Profile profileInfo={profileInfo} />
+          <Bg>
+            <Founders information={information} />
+          </Bg>
+          <Access />
+          <div />
+        </Wrap>
+      </Container>
+    </motion.div>
   );
 };
 

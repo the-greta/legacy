@@ -1,6 +1,7 @@
 import "@/styles/style.css";
 
 import { Inter } from "@next/font/google";
+import { AnimatePresence } from "framer-motion";
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
@@ -23,7 +24,12 @@ export default function App({ Component, pageProps }) {
         <Header navigation={navigation} />
         <Container>
           <Main>
-            <Component {...pageProps} />
+            <AnimatePresence
+              mode="wait"
+              onExitComplete={() => window.scrollTo(0, 0)}
+            >
+              <Component {...pageProps} />
+            </AnimatePresence>
           </Main>
           <Footer />
         </Container>

@@ -17,6 +17,7 @@ export default Title;
 
 const Conatiner = styled.div`
   text-transform: capitalize;
+  margin-bottom: 3rem;
 `;
 const Subtitle = styled.sub`
   font-weight: 700;
