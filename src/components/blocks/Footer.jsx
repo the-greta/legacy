@@ -7,7 +7,7 @@ import AppLink from "@/components/atoms/AppLink";
 
 import gretaLogoWhite from "../../../public/image/LOGO_WHITE.png";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <Container>
       <Nav>
@@ -22,9 +22,11 @@ const Footer = () => {
           />
         </Link>
         <NavSection>
-          <AppLink href="/">회사소개</AppLink>
-          <AppLink href="/">합성/재현데이터</AppLink>
-          <AppLink href="/">인재채용</AppLink>
+          {props.navigation.map((nav, i) => (
+            <AppLink key={i} href={nav.href}>
+              {nav.name}
+            </AppLink>
+          ))}
         </NavSection>
         <div />
       </Nav>

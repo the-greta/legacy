@@ -15,6 +15,10 @@ export const colors = {
   secondary300: "#000",
   secondary500: "#000",
   secondary700: "#000",
+
+  neutral300: "#f5f5f5",
+  neutral500: "#d9d9d9",
+  neutral700: "#d9d9d9",
 };
 
 export const lightThemeColors = {

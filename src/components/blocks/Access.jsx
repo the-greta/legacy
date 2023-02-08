@@ -51,8 +51,8 @@ const Wrap = styled.div`
 `;
 
 const Placeholder = styled.div`
-  background: gray;
-  color: white;
+  background: ${({ theme }) => theme.colors.neutral700};
+  color: ${({ theme }) => theme.colors.white};
   height: auto;
   flex: 1;
   padding: 1rem;

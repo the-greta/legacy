@@ -43,10 +43,10 @@ const Grid = styled.div`
 `;
 const Wrap = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 2rem;
 `;
 const Placeholder = styled.div`
-  background: gray;
+  background: ${({ theme }) => theme.colors.neutral300};
   height: 400px;
 `;

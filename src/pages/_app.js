@@ -10,28 +10,39 @@ import Header from "@/components/blocks/Header";
 import { theme } from "@/theme/theme";
 
 const inter = Inter({ subsets: ["latin"] });
-const navigation = [
+const headerNavs = [
   { name: "home", href: "/" },
   { name: "about", href: "/about" },
-  { name: "careers", href: "/" },
+  {
+    name: "careers",
+    href: "https://broad-calendula-d4c.notion.site/GRETA-ddd868d6109b4434ae9ad8efdaec2e91",
+  },
+];
+const footerNavs = [
+  { name: "회사소개", href: "/about" },
+  { name: "합성/재현데이터", href: "/" },
+  {
+    name: "인재채용",
+    href: "https://broad-calendula-d4c.notion.site/GRETA-ddd868d6109b4434ae9ad8efdaec2e91",
+  },
 ];
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, router }) {
   return (
     <ThemeProvider theme={theme}>
       {/* <div className={inter.className}> */}
       <div>
-        <Header navigation={navigation} />
+        <Header navigation={headerNavs} />
         <Container>
           <Main>
             <AnimatePresence
               mode="wait"
               onExitComplete={() => window.scrollTo(0, 0)}
             >
-              <Component {...pageProps} />
+              <Component key={router.asPath} {...pageProps} />
             </AnimatePresence>
           </Main>
-          <Footer />
+          <Footer navigation={footerNavs} />
         </Container>
       </div>
     </ThemeProvider>

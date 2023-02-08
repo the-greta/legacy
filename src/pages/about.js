@@ -61,7 +61,7 @@ const Wrap = styled.div`
   /* padding: 0 2rem; */
 `;
 const Bg = styled.div`
-  background: gray;
+  background: ${({ theme }) => theme.colors.neutral300};
   margin: 0 calc(50% - 50vw);
   padding: 120px calc(50vw - 50%);
 `;

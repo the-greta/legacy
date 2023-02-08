@@ -15,8 +15,8 @@ const Header = (props) => {
           <Image
             src={gretaLogoGold}
             alt="Greta Logo"
-            width={140}
-            height={50}
+            width={120}
+            height={30}
             unoptimized={true}
             priority
           />
@@ -41,6 +41,11 @@ const Container = styled.div`
   width: 100%;
   z-index: ${({ theme }) => theme.zindex.header};
   height: 70px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral500};
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 `;
 const Nav = styled.nav`
   display: flex;

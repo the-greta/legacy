@@ -10,7 +10,12 @@ const Services = (props) => {
       <Title sub="Services">What We Do?</Title>
       <Wrap>
         {props.services.map((service, i) => (
-          <ServiceCard key={i} name={service.name} desc={service.desc} />
+          <ServiceCard
+            key={i}
+            name={service.name}
+            desc={service.desc}
+            href={service.href}
+          />
         ))}
       </Wrap>
     </Container>

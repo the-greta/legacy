@@ -32,10 +32,6 @@ const Profile = (props) => {
             <Td>124-87-59303</Td>
           </tr>
           <tr>
-            <Th>TEL</Th>
-            <Td>+82-70-8648-1024</Td>
-          </tr>
-          <tr>
             <Th>E-mail</Th>
             <Td>greta@the-greta.com</Td>
           </tr>
@@ -60,13 +56,13 @@ const Table = styled.table`
 `;
 const Th = styled.th`
   padding: 1.5em 0;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral500};
   font-weight: 700;
   width: 30%;
   vertical-align: top;
 `;
 const Td = styled.td`
   padding: 1.5em 0;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral500};
   width: 75%;
 `;

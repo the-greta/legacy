@@ -3,20 +3,27 @@ import styled from "styled-components";
 
 const BaseButton = styled.button`
   text-align: center;
-  color: white;
+  color: ${({ theme }) => theme.colors.white};
   min-width: 100px;
   padding: 0.75rem 2rem;
   font-weight: 700;
   transition: 0.1s;
   text-transform: capitalize;
   border: 1px solid transparent;
+  border-radius: 5px;
   cursor: pointer;
 `;
 const ButtonPrimary = styled(BaseButton)`
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.primary500};
+  :hover {
+    background: ${({ theme }) => theme.colors.primary700};
+  }
 `;
 const ButtonSecondary = styled(BaseButton)`
-  background: ${({ theme }) => theme.colors.secondary};
+  background: ${({ theme }) => theme.colors.secondary500};
+  :hover {
+    background: ${({ theme }) => theme.colors.secondary700};
+  }
 `;
 const buttonStyleLists = {
   default: BaseButton,
