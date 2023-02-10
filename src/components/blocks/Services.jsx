@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import ServiceCard from "@/components/atoms/ServiceCard";
+import ServiceCard from "@/components/blocks/ServiceCard";
 import Title from "@/components/atoms/Title";
 
 const Services = (props) => {

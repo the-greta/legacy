@@ -1,3 +1,4 @@
+import { Noto_Sans_Mono } from "@next/font/google";
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
@@ -7,31 +8,39 @@ import Title from "@/components/atoms/Title";
 
 import Map from "../../../public/image/map.png";
 
+const mono = Noto_Sans_Mono({ subsets: ["latin"] });
 const Access = () => {
   return (
-    <Container>
+    <Container id="access">
       <Title sub="Access">찾아오시는 길</Title>
       <Grid>
         <div style={{ position: "relative" }}>
           <Image
             src={Map}
+            alt="greta_access_map"
             size="100vw"
-            auto
-            style={{ height: "auto", width: "100%", marginBottom: "-30px" }}
+            auto="true"
+            style={{
+              height: "100%",
+              width: "100%",
+              marginBottom: "-30px",
+              objectFit: "cover",
+            }}
             placeholder="blur"
           />
           <span
             style={{
-              fontSize: "12px",
+              fontSize: "10px",
               background: "#fff",
-              padding: "0.5em 1em",
+              color: `$({ theme }) => theme.color.neutral500`,
+              padding: "0.5em 1em 0.5em",
             }}
           >
             출처: 브이월드
           </span>
         </div>
         <Wrap>
-          <div>
+          <div style={{ marginBottom: "32px" }}>
             <div
               style={{
                 fontSize: "1.125rem",
@@ -43,22 +52,29 @@ const Access = () => {
             </div>
             <div>서울특별시 중구 무교로 28, 시그너스빌딩 604호</div>
           </div>
-          <Placeholder>
-            <ContactTitle>
-              <h3>Contact</h3>
-            </ContactTitle>
+          <ContactCard>
+            <ContactTitle className={mono.className}>Contact</ContactTitle>
             <div style={{ width: "100%" }}>
               <ContactWrap>
-                <Image src="/svg/phone_fill.svg" width={36} height={36} />
+                <Image
+                  src="/svg/phone_fill.svg"
+                  alt="greta_tel"
+                  width={36}
+                  height={36}
+                />
                 +82-70-8648-1024
               </ContactWrap>
               <ContactWrap>
-                <Image src="/svg/mail_fill.svg" width={36} height={36} />
+                <Image
+                  src="/svg/mail_fill.svg"
+                  alt="greta_mail"
+                  width={36}
+                  height={36}
+                />
                 <EmailLink to="hsfubAuif.hsfub/dpn" />
               </ContactWrap>
             </div>
-            <div />
-          </Placeholder>
+          </ContactCard>
         </Wrap>
       </Grid>
     </Container>
@@ -72,7 +88,7 @@ const Grid = styled.div`
   display: grid;
 
   ${({ theme }) => theme.breakpoint.md`
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
   `}
   gap: 1rem;
 `;
@@ -82,22 +98,24 @@ const Wrap = styled.div`
   gap: 2rem;
 `;
 
-const Placeholder = styled.div`
+const ContactCard = styled.div`
   background: ${({ theme }) => theme.colors.neutral300};
   color: ${({ theme }) => theme.colors.black};
   height: auto;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 0;
+  ${({ theme }) => theme.breakpoint.md`
+    padding: 30px 0;
+    `}
+  padding: 30px 0 50px;
 `;
 const ContactTitle = styled.div`
   color: ${({ theme }) => theme.colors.primary700};
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 0.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
 `;
 const ContactWrap = styled.div`
   display: flex;
@@ -105,5 +123,5 @@ const ContactWrap = styled.div`
   gap: 16px;
   width: 80%;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding: 1rem 0 0.5rem;
 `;

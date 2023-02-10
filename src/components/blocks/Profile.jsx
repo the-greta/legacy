@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import EmailLink from "@/components/atoms/EmailLink";
 import Title from "@/components/atoms/Title";
-
-import EmailLink from "./EmailLink";
 
 const Profile = (props) => {
   return (
@@ -49,15 +48,15 @@ export default Profile;
 
 const Container = styled.div`
   display: grid;
-  ${({ theme }) => {
-    theme.breakpoint.md`
+  ${({ theme }) => theme.breakpoint.md`
     grid-template-columns: 1fr 2fr;
-    gap: 3rem;
-  `;
-  }}
+    gap: 2rem;
+  `}
 `;
 const Table = styled.table`
-  margin-top: 2.5rem;
+  ${({ theme }) => theme.breakpoint.md`
+    margin-top: 2.5rem;
+  `}
   width: 100%;
   text-align: left;
   border-collapse: collapse;

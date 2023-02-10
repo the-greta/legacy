@@ -1,25 +1,18 @@
+import { Noto_Sans_Mono } from "@next/font/google";
 import React from "react";
 import styled from "styled-components";
 
-import AppLink from "./AppLink";
-
+const mono = Noto_Sans_Mono({ subsets: ["latin"] });
 const KeyPerson = (props) => {
-  const mailto = `mailto:${props.info.email}`;
-
   return (
     <Container>
       <div>
-        <h3>{props.info.name}</h3>
-        <sub>{props.info.position}</sub>
+        <h3 style={{ marginBottom: 0 }}>{props.info.name}</h3>
+        <Sub className={mono.className}>{props.info.position}</Sub>
         <Context>
           {props.info.dep}
           <br />
           {props.info.dep2}
-        </Context>
-        <Context>
-          <AppLink href={mailto} styleType="email">
-            {props.info.email}
-          </AppLink>
         </Context>
       </div>
     </Container>
@@ -40,4 +33,8 @@ const Container = styled.div`
 `;
 const Context = styled.p`
   font-size: 0.875rem;
+`;
+const Sub = styled.sub`
+  font-size: 0.75rem;
+  color: ${({ theme }) => theme.colors.primary700};
 `;

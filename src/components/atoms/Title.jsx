@@ -1,14 +1,16 @@
+import { Noto_Sans_Mono } from "@next/font/google";
 import React from "react";
 import styled from "styled-components";
 
+const mono = Noto_Sans_Mono({ subsets: ["latin"] });
 const Title = (props) => {
   const sub = props.sub ? props.sub : "Loren Ipsum";
   const desc = props.desc ? props.desc : null;
   return (
     <Conatiner>
-      <Subtitle>{sub}</Subtitle>
+      <Subtitle className={mono.className}>{sub}</Subtitle>
       <h2>{props.children}</h2>
-      <p>{desc}</p>
+      <Context>{desc}</Context>
     </Conatiner>
   );
 };
@@ -25,3 +27,4 @@ const Subtitle = styled.sub`
   text-transform: uppercase;
   letter-spacing: 0.1em;
 `;
+const Context = styled.p``;

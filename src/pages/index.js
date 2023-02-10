@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-import Profile from "@/components/atoms/Profile";
+import Profile from "@/components/blocks/Profile";
 import Access from "@/components/blocks/Access";
 import Founders from "@/components/blocks/Founders";
 import HeroSection from "@/components/blocks/HeroSection";

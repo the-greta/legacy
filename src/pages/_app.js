@@ -11,7 +11,8 @@ import { theme } from "@/theme/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 const headerNavs = [
-  { name: "home", href: "/" },
+  { name: "about", href: "/" },
+  { name: "synthetic data", href: "/services/synthetic-data" },
   {
     name: "careers",
     href: "https://broad-calendula-d4c.notion.site/GRETA-ddd868d6109b4434ae9ad8efdaec2e91",
@@ -19,7 +20,7 @@ const headerNavs = [
 ];
 const footerNavs = [
   { name: "회사소개", href: "/" },
-  { name: "합성/재현데이터", href: "/" },
+  { name: "합성/재현데이터", href: "/services/synthetic-data" },
   {
     name: "인재채용",
     href: "https://broad-calendula-d4c.notion.site/GRETA-ddd868d6109b4434ae9ad8efdaec2e91",
@@ -29,20 +30,21 @@ const footerNavs = [
 export default function App({ Component, pageProps, router }) {
   return (
     <ThemeProvider theme={theme}>
-      {/* <div className={inter.className}> */}
-      <div>
-        <Header navigation={headerNavs} />
-        <Container>
-          <Main>
-            <AnimatePresence
-              mode="wait"
-              onExitComplete={() => window.scrollTo(0, 0)}
-            >
-              <Component key={router.asPath} {...pageProps} />
-            </AnimatePresence>
-          </Main>
-          <Footer navigation={footerNavs} />
-        </Container>
+      <div className={inter.className}>
+        <div>
+          <Header navigation={headerNavs} />
+          <Container>
+            <Main>
+              <AnimatePresence
+                mode="wait"
+                onExitComplete={() => window.scrollTo(0, 0)}
+              >
+                <Component key={router.asPath} {...pageProps} />
+              </AnimatePresence>
+            </Main>
+            <Footer navigation={footerNavs} />
+          </Container>
+        </div>
       </div>
     </ThemeProvider>
   );
@@ -55,5 +57,5 @@ const Container = styled.div`
 const Main = styled.main`
   max-width: 1024px;
   margin: 0 auto;
-  padding: 70px 2rem 250px;
+  padding: 70px 3rem 250px;
 `;

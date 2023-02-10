@@ -35,5 +35,5 @@ export default EmailLink;
 
 const MailLink = styled(Link)`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.primary500};
+  color: ${({ theme }) => theme.colors.primary700};
 `;

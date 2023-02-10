@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import AppLink from "@/components/atoms/AppLink";
 
-import gretaLogoWhite from "../../../public/image/LOGO_WHITE.png";
+import gretaLogo from "../../../public/image/LOGO_GOLD_FULL.png";
 
 const Footer = (props) => {
   return (
@@ -13,7 +13,7 @@ const Footer = (props) => {
       <Nav>
         <Link href="/">
           <Image
-            src={gretaLogoWhite}
+            src={gretaLogo}
             alt="Greta Logo"
             width={120}
             height={45}
@@ -43,7 +43,8 @@ const Container = styled.footer`
   width: 100%;
   position: absolute;
   bottom: 0;
-  background: black;
+  background: ${({ theme }) => theme.colors.neutral300};
+  color: ${({ theme }) => theme.colors.black};
   font-size: 0.75rem;
 `;
 const Nav = styled.nav`
@@ -59,7 +60,6 @@ const Nav = styled.nav`
   margin: auto;
   height: 100%;
   max-width: 1024px;
-  color: white;
 `;
 const NavSection = styled.div`
   display: flex;
@@ -78,7 +78,6 @@ const Wrap = styled.div`
   gap: 1rem;
   padding: 1.5rem 2rem;
   border-top: 0.5px solid lightgray;
-  color: white;
   opacity: 0.7;
 `;
 const Copyright = styled.span``;

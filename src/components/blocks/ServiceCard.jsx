@@ -10,7 +10,8 @@ const ServiceCard = (props) => {
       <Wrap>
         <Image
           src={props.src}
-          auto
+          alt={props.name}
+          auto="true"
           size="100vw"
           style={{ width: "100%", height: "auto", margin: "-60px 0" }}
           unoptimized={true}
@@ -24,7 +25,7 @@ const ServiceCard = (props) => {
         <LinkWrap>
           {props.href ? (
             <AppLink href={props.href} styleType="detail">
-              See More
+              Learn More
             </AppLink>
           ) : null}
         </LinkWrap>
@@ -44,7 +45,7 @@ const Container = styled.div`
   gap: 2rem;
   padding: 3rem 2rem;
   border: 1px solid ${({ theme }) => theme.colors.neutral500};
-  margin: -1px 0;
+  margin: -1px 0 0;
 `;
 const Wrap = styled.div`
   position: relative;

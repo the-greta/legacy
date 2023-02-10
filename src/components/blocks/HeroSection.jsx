@@ -15,8 +15,9 @@ const HeroSection = (props) => {
         <Placeholder style={{ order: 2 }}>
           <Image
             src={Main}
+            alt="greta_main"
             size="100vw"
-            auto
+            auto="true"
             style={{ height: "auto", width: "100%" }}
             unoptimized={true}
             priority
@@ -28,10 +29,10 @@ const HeroSection = (props) => {
           </Title>
           <Wrap>
             <Scroll to="services" smooth={true} duration={600} offset={-120}>
-              <Button styleType="primary">primary</Button>
+              <Button styleType="primary">Explore 🠗</Button>
             </Scroll>
-            <Scroll to="profile" smooth={true} duration={600} offset={-120}>
-              <Button styleType="secondary">secondary</Button>
+            <Scroll to="access" smooth={true} duration={600} offset={-120}>
+              <Button styleType="secondary">Access</Button>
             </Scroll>
           </Wrap>
         </div>
@@ -57,8 +58,8 @@ const Grid = styled.div`
 `;
 const Wrap = styled.div`
   display: flex;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin: 2rem 0;
 `;
 const Placeholder = styled.div`
   position: relative;

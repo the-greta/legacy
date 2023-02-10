@@ -6,15 +6,13 @@ export const colors = {
   gray: "#999",
   lightgray: "#f5f5f5",
 
-  primary: "#cf9f52",
-  primary300: "#b68d40",
+  primary300: "#ebbd6e",
   primary500: "#b68d40",
-  primary700: "#b68d40",
+  primary700: "#836011",
 
-  secondary: "#122620",
-  secondary300: "#122620",
+  secondary300: "#394e47",
   secondary500: "#122620",
-  secondary700: "#122620",
+  secondary700: "#000000",
 
   neutral300: "#f5f5f5",
   neutral500: "#d9d9d9",

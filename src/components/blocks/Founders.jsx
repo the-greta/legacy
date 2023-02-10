@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import KeyPerson from "@/components/atoms/KeyPerson";
 import Title from "@/components/atoms/Title";
+import KeyPerson from "@/components/blocks/KeyPerson";
 
 const Founders = (props) => {
   return (
