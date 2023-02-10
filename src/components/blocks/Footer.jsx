@@ -28,13 +28,10 @@ const Footer = (props) => {
             </AppLink>
           ))}
         </NavSection>
-        <div />
       </Nav>
       <Wrap>
-        <div />
-        <Copyright>© GRETA Inc. — All rights reserved</Copyright>
         <AppLink href="/">개인정보처리방침</AppLink>
-        <AppLink href="/">법적고지</AppLink>
+        <Copyright>© GRETA Inc. — All rights reserved</Copyright>
       </Wrap>
     </Container>
   );
@@ -51,9 +48,14 @@ const Container = styled.footer`
 `;
 const Nav = styled.nav`
   display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  ${({ theme }) => theme.breakpoint.sm`
+    flex-direction: row;
+    align-items: center;
+  `}
   justify-content: space-between;
-  align-items: center;
-  padding: 2.5rem 0 2.5rem;
+  padding: 2.5rem 2rem 2.5rem;
   margin: auto;
   height: 100%;
   max-width: 1024px;
@@ -62,13 +64,19 @@ const Nav = styled.nav`
 const NavSection = styled.div`
   display: flex;
   gap: 2rem;
-  justify-content: end;
+  ${({ theme }) => theme.breakpoint.sm`
+    justify-content: end;
+  `}
 `;
 const Wrap = styled.div`
   display: flex;
+  flex-direction: column;
+  ${({ theme }) => theme.breakpoint.sm`
+    flex-direction: row;
+  `}
   justify-content: center;
   gap: 1rem;
-  padding: 1.5rem 0;
+  padding: 1.5rem 2rem;
   border-top: 0.5px solid lightgray;
   color: white;
   opacity: 0.7;

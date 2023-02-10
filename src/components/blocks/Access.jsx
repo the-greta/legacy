@@ -1,16 +1,35 @@
+import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 
-import Button from "@/components/atoms/Button";
-import Map from "@/components/atoms/Map";
+import EmailLink from "@/components/atoms/EmailLink";
 import Title from "@/components/atoms/Title";
+
+import Map from "../../../public/image/map.png";
 
 const Access = () => {
   return (
     <Container>
       <Title sub="Access">찾아오시는 길</Title>
       <Grid>
-        <Map latitude="37.5684945" longitude="126.9795985" />
+        <div style={{ position: "relative" }}>
+          <Image
+            src={Map}
+            size="100vw"
+            auto
+            style={{ height: "auto", width: "100%", marginBottom: "-30px" }}
+            placeholder="blur"
+          />
+          <span
+            style={{
+              fontSize: "12px",
+              background: "#fff",
+              padding: "0.5em 1em",
+            }}
+          >
+            출처: 브이월드
+          </span>
+        </div>
         <Wrap>
           <div>
             <div
@@ -25,10 +44,20 @@ const Access = () => {
             <div>서울특별시 중구 무교로 28, 시그너스빌딩 604호</div>
           </div>
           <Placeholder>
-            <h3>There is no one who loves pain itself</h3>
-            <div>
-              <Button styleType="secondary">button</Button>
+            <ContactTitle>
+              <h3>Contact</h3>
+            </ContactTitle>
+            <div style={{ width: "100%" }}>
+              <ContactWrap>
+                <Image src="/svg/phone_fill.svg" width={36} height={36} />
+                +82-70-8648-1024
+              </ContactWrap>
+              <ContactWrap>
+                <Image src="/svg/mail_fill.svg" width={36} height={36} />
+                <EmailLink to="hsfubAuif.hsfub/dpn" />
+              </ContactWrap>
             </div>
+            <div />
           </Placeholder>
         </Wrap>
       </Grid>
@@ -41,7 +70,10 @@ export default Access;
 const Container = styled.div``;
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
+
+  ${({ theme }) => theme.breakpoint.md`
+    grid-template-columns: 2fr 1fr;
+  `}
   gap: 1rem;
 `;
 const Wrap = styled.div`
@@ -51,12 +83,27 @@ const Wrap = styled.div`
 `;
 
 const Placeholder = styled.div`
-  background: ${({ theme }) => theme.colors.neutral700};
-  color: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.neutral300};
+  color: ${({ theme }) => theme.colors.black};
   height: auto;
   flex: 1;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+`;
+const ContactTitle = styled.div`
+  color: ${({ theme }) => theme.colors.primary700};
+  width: 80%;
+  margin: 0 auto;
+`;
+const ContactWrap = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1rem;
 `;

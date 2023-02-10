@@ -22,4 +22,6 @@ const Conatiner = styled.div`
 const Subtitle = styled.sub`
   font-weight: 700;
   color: ${({ theme }) => theme.colors.primary700};
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 `;

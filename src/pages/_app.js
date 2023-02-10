@@ -12,14 +12,13 @@ import { theme } from "@/theme/theme";
 const inter = Inter({ subsets: ["latin"] });
 const headerNavs = [
   { name: "home", href: "/" },
-  { name: "about", href: "/about" },
   {
     name: "careers",
     href: "https://broad-calendula-d4c.notion.site/GRETA-ddd868d6109b4434ae9ad8efdaec2e91",
   },
 ];
 const footerNavs = [
-  { name: "회사소개", href: "/about" },
+  { name: "회사소개", href: "/" },
   { name: "합성/재현데이터", href: "/" },
   {
     name: "인재채용",

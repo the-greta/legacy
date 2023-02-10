@@ -6,9 +6,10 @@ const BaseButton = styled.button`
   color: ${({ theme }) => theme.colors.white};
   min-width: 100px;
   padding: 0.75rem 2rem;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 0.1em;
   transition: 0.1s;
-  text-transform: capitalize;
+  text-transform: uppercase;
   border: 1px solid transparent;
   border-radius: 5px;
   cursor: pointer;
@@ -20,10 +21,16 @@ const ButtonPrimary = styled(BaseButton)`
   }
 `;
 const ButtonSecondary = styled(BaseButton)`
-  background: ${({ theme }) => theme.colors.secondary500};
+  background: ${({ theme }) => theme.colors.white};
+  :hover {
+    background: ${({ theme }) => theme.colors.primary500};
+  }
+  border: 1px solid ${({ theme }) => theme.colors.primary500};
+  color: ${({ theme }) => theme.colors.primary700};
+  /* background: ${({ theme }) => theme.colors.secondary500};
   :hover {
     background: ${({ theme }) => theme.colors.secondary700};
-  }
+  } */
 `;
 const buttonStyleLists = {
   default: BaseButton,

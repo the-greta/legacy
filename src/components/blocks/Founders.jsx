@@ -22,5 +22,9 @@ export default Founders;
 const Container = styled.div``;
 const Wrap = styled.div`
   display: flex;
+  flex-direction: column;
+  ${({ theme }) => theme.breakpoint.md`
+    flex-direction: row;
+  `}
   gap: 1rem;
 `;

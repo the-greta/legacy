@@ -2,13 +2,15 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-import Contact from "@/components/blocks/Contact";
+import Profile from "@/components/atoms/Profile";
+import Access from "@/components/blocks/Access";
+import Founders from "@/components/blocks/Founders";
 import HeroSection from "@/components/blocks/HeroSection";
 import Services from "@/components/blocks/Services";
 
-import dataConsulting from "../../public/image/business_consulting.jpg";
-import dataPlatform from "../../public/image/business_platform.jpg";
-import dataSynthetic from "../../public/image/business_synthetic.jpg";
+import dataPlatform from "../../public/image/platform.png";
+import dataConsulting from "../../public/image/solution.png";
+import dataSynthetic from "../../public/image/synthetic.png";
 
 const hero = {
   title: "There is no one who loves pain itself, because it is pain",
@@ -34,6 +36,27 @@ const services = [
     href: "",
   },
 ];
+const profileInfo = {
+  title: "기업 정보",
+  subtitle: "About Us",
+  desc: "Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
+};
+const information = [
+  {
+    name: "김현태",
+    position: "Ph.D., FSA, CERA",
+    dep: "연세대학교 응용통계학과 교수",
+    dep2: "통계데이터사이언스학과 교수",
+    // email: "jhtkim@yonsei.ac.kr",
+  },
+  {
+    name: "임종호",
+    position: "Ph.D.",
+    dep: "연세대학교 응용통계학과 교수",
+    dep2: "통계데이터사이언스학과 교수",
+    // email: "ijh38@yonsei.ac.kr",
+  },
+];
 const index = () => {
   return (
     <motion.div
@@ -51,8 +74,12 @@ const index = () => {
         <Wrap>
           <div />
           <Services services={services} />
-          <div />
-          <Contact />
+          <Bg>
+            <Profile profileInfo={profileInfo} />
+            <div />
+            <Founders information={information} />
+          </Bg>
+          <Access />
           <div />
         </Wrap>
       </Container>
@@ -74,4 +101,12 @@ const Wrap = styled.div`
 const Hr = styled.hr`
   border: none;
   border-top: 1px solid ${({ theme }) => theme.colors.neutral500};
+`;
+const Bg = styled.div`
+  background: ${({ theme }) => theme.colors.neutral300};
+  margin: 0 calc(50% - 50vw);
+  padding: 120px calc(50vw - 50%);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 `;

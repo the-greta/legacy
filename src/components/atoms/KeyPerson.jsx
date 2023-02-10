@@ -22,11 +22,6 @@ const KeyPerson = (props) => {
           </AppLink>
         </Context>
       </div>
-      <div style={{ textAlign: "right" }}>
-        <AppLink href="/" styleType="detail">
-          Homepage
-        </AppLink>
-      </div>
     </Container>
   );
 };
@@ -34,7 +29,7 @@ const KeyPerson = (props) => {
 export default KeyPerson;
 
 const Container = styled.div`
-  width: 100%;
+  flex: 1;
   height: 300px;
   border: 1px solid ${({ theme }) => theme.colors.neutral300};
   padding: 2rem 3rem;

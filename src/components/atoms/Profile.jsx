@@ -3,9 +3,11 @@ import styled from "styled-components";
 
 import Title from "@/components/atoms/Title";
 
+import EmailLink from "./EmailLink";
+
 const Profile = (props) => {
   return (
-    <Container>
+    <Container id="profile">
       <Title sub={props.profileInfo.subtitle} desc={props.profileInfo.desc}>
         {props.profileInfo.title}
       </Title>
@@ -33,7 +35,9 @@ const Profile = (props) => {
           </tr>
           <tr>
             <Th>E-mail</Th>
-            <Td>greta@the-greta.com</Td>
+            <Td>
+              <EmailLink to="hsfubAuif.hsfub/dpn" />
+            </Td>
           </tr>
         </tbody>
       </Table>
@@ -45,8 +49,12 @@ export default Profile;
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 3rem;
+  ${({ theme }) => {
+    theme.breakpoint.md`
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+  `;
+  }}
 `;
 const Table = styled.table`
   margin-top: 2.5rem;

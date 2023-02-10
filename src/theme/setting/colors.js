@@ -7,14 +7,14 @@ export const colors = {
   lightgray: "#f5f5f5",
 
   primary: "#cf9f52",
-  primary300: "#cf9f52",
-  primary500: "#cf9f52",
-  primary700: "#cf9f52",
+  primary300: "#b68d40",
+  primary500: "#b68d40",
+  primary700: "#b68d40",
 
-  secondary: "#000",
-  secondary300: "#000",
-  secondary500: "#000",
-  secondary700: "#000",
+  secondary: "#122620",
+  secondary300: "#122620",
+  secondary500: "#122620",
+  secondary700: "#122620",
 
   neutral300: "#f5f5f5",
   neutral500: "#d9d9d9",

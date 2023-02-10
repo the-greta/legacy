@@ -4,12 +4,23 @@ import styled from "styled-components";
 import AppLink from "@/components/atoms/AppLink";
 import Button from "@/components/atoms/Button";
 import Title from "@/components/atoms/Title";
-import { handleFormSubmit } from "@/lib/form-submission-handler";
 
+const unCryptMailto = (s) => {
+  let n = 0;
+  let r = "";
+  for (let i = 0; i < s.length; i++) {
+    n = s.charCodeAt(i);
+    if (n >= 8364) {
+      n = 128;
+    }
+    r += String.fromCharCode(n - 1);
+  }
+  return r;
+};
+const linkTo_UnCryptMailto = (s) => {
+  location.href = unCryptMailto(s);
+};
 const Contact = () => {
-  const handleSubmit = (e) => {
-    handleFormSubmit(e);
-  };
   return (
     <Container id="contact">
       <Grid>
@@ -20,7 +31,12 @@ const Contact = () => {
         </div>
       </Grid>
       {/* <form method="POST" action={spread}> */}
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}> */}
+      <form
+        method="POST"
+        action="mailto:greta@the-greta.com?subject=[문의상담]"
+        encType="text/plain"
+      >
         <Grid>
           <Wrap>
             <h3> 1. Lorem Ipsum</h3>

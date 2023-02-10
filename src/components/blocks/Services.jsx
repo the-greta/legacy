@@ -15,6 +15,7 @@ const Services = (props) => {
             name={service.name}
             desc={service.desc}
             href={service.href}
+            src={service.src}
           />
         ))}
       </Wrap>
@@ -25,4 +26,7 @@ const Services = (props) => {
 export default Services;
 
 const Container = styled.div``;
-const Wrap = styled.div``;
+const Wrap = styled.div`
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+`;
