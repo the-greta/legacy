@@ -77,7 +77,7 @@ const Wrap = styled.div`
   justify-content: center;
   gap: 1rem;
   padding: 1.5rem 2rem;
-  border-top: 0.5px solid lightgray;
+  border-top: 0.5px solid ${({ theme }) => theme.colors.neutral500};
   opacity: 0.7;
 `;
 const Copyright = styled.span``;
