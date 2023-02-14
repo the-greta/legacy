@@ -1,48 +1,36 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import styled from 'styled-components';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
-import AppLink from '@/components/atoms/AppLink';
-import ContactButton from '@/components/atoms/ContactButton';
-import FooterMenu from '@/components/atoms/FooterMenu';
+import AppLink from "@/components/atoms/AppLink";
 
-import gretaLogo from '../../../public/image/logo_white.png'
+import gretaLogo from "../../../public/image/LOGO_GOLD_FULL.png";
 
-const applyLink = "https://broad-calendula-d4c.notion.site/GRETA-ddd868d6109b4434ae9ad8efdaec2e91"
-
-const Footer = () => {
+const Footer = (props) => {
   return (
     <Container>
+      <Nav>
+        <Link href="/">
+          <Image
+            src={gretaLogo}
+            alt="Greta Logo"
+            width={120}
+            height={45}
+            unoptimized={true}
+            priority
+          />
+        </Link>
+        <NavSection>
+          {props.navigation.map((nav, i) => (
+            <AppLink key={i} href={nav.href}>
+              {nav.name}
+            </AppLink>
+          ))}
+        </NavSection>
+      </Nav>
       <Wrap>
-        <div style={{width: "fit-content"}}>
-          <MenuWrap>
-            <Link href="/">
-              <Image
-                src={gretaLogo}
-                alt="Greta Logo"
-                width={100}
-                height={40}
-                priority
-              />
-            </Link>
-            <FooterMenu>
-              <AppLink href="/about" color="#CED1D4">회사소개</AppLink>
-              <AppLink href="/contact" color="#CED1D4">문의상담</AppLink>
-              <AppLink href={applyLink} color="#CED1D4">인재채용</AppLink>
-              <AppLink href="/contact" color="#f5f5f5">개인정보 처리방침</AppLink>
-            </FooterMenu>
-          </MenuWrap>
-          <p style={{lineHeight: 2}}>
-            ㈜그레타 | 사업자등록번호: 110111-8078051 | 공동대표: 김현태, 임종호<br/>
-            주소: 서울특별시 중구 무교로 28 6층 604호 | 전화: +82-70-8648-1024<br/>
-          </p>
-          <span><b>© GRETA Inc. All right reserved</b></span>
-        </div>
-        <div style={{flex: 1}}/>
-        <div style={{margin: "10px auto 0", flex: 2}}>
-          <ContactButton href="/contact">contact</ContactButton>
-        </div>
+        <Copyright>© GRETA Inc. — All rights reserved</Copyright>
       </Wrap>
     </Container>
   );
@@ -50,26 +38,45 @@ const Footer = () => {
 
 export default Footer;
 
-const Container = styled.div`
+const Container = styled.footer`
   width: 100%;
   position: absolute;
   bottom: 0;
-  color: ${({theme}) => theme.colors.gray};
-  background-color: ${({theme}) => theme.colors.secondary};
-  font-size: 12px;
-`
+  background: ${({ theme }) => theme.colors.neutral300};
+  color: ${({ theme }) => theme.colors.black};
+  font-size: 0.75rem;
+`;
+const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  ${({ theme }) => theme.breakpoint.sm`
+    flex-direction: row;
+    align-items: center;
+  `}
+  justify-content: space-between;
+  padding: 2.5rem 2rem 2.5rem;
+  margin: auto;
+  height: 100%;
+  max-width: 1024px;
+`;
+const NavSection = styled.div`
+  display: flex;
+  gap: 2rem;
+  ${({ theme }) => theme.breakpoint.sm`
+    justify-content: end;
+  `}
+`;
 const Wrap = styled.div`
   display: flex;
-  flex-wrap: wrap-reverse;
-  gap: 2rem;
-  justify-content: space-between;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 5rem 5rem 4rem;
-`
-const MenuWrap = styled.div`
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  flex-direction: column;
+  ${({ theme }) => theme.breakpoint.sm`
+    flex-direction: row;
+  `}
+  justify-content: center;
   gap: 1rem;
-`
+  padding: 1.5rem 2rem;
+  border-top: 0.5px solid ${({ theme }) => theme.colors.neutral500};
+  opacity: 0.7;
+`;
+const Copyright = styled.span``;

@@ -4,10 +4,19 @@ export const colors = {
 
   darkgray: "#6e6e6e",
   gray: "#999",
-  lightgray: '#f5f5f5',
+  lightgray: "#f5f5f5",
 
-  primary: "#123150",
-  secondary: "#081827",
+  primary300: "#ebbd6e",
+  primary500: "#b68d40",
+  primary700: "#836011",
+
+  secondary300: "#394e47",
+  secondary500: "#122620",
+  secondary700: "#000000",
+
+  neutral300: "#f5f5f5",
+  neutral500: "#d9d9d9",
+  neutral700: "#d9d9d9",
 };
 
 export const lightThemeColors = {

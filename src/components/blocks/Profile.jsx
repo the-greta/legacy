@@ -1,38 +1,48 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import SectionTitle from '@/components/atoms/SectionTitle';
-import Subtitle from '@/components/atoms/Subtitle';
+import EmailLink from "@/components/atoms/EmailLink";
+import Title from "@/components/atoms/Title";
+import { baseInfo } from "@/const/base";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
-    <Container>
-        <Wrap>
-          <SectionTitle size="h2">Profile</SectionTitle>
-          <Subtitle fontSize="14">회사 정보</Subtitle>
-        </Wrap>
-        <Context>
-          <Table style={{overflow: "scroll"}}>
-            <tbody>
-              <tr>
-                <Th>회사명</Th>
-                <Td>주식회사 그레타</Td>
-              </tr>
-              <tr>
-                <Th>소재지</Th>
-                <Td>서울특별시 중구 무교로 28, 시그너스빌딩 604호</Td>
-              </tr>
-              <tr>
-                <Th>설립일</Th>
-                <Td>2021년 11월 3일</Td>
-              </tr>
-              <tr>
-                <Th>사업자 등록번호</Th>
-                <Td>124-87-59303</Td>
-              </tr>
-            </tbody>
-          </Table>
-        </Context>
+    <Container id="profile">
+      <Title sub={props.profileInfo.subtitle} desc={props.profileInfo.desc}>
+        {props.profileInfo.title}
+      </Title>
+      <Table style={{ overflow: "scroll" }}>
+        <tbody>
+          <tr>
+            <Th>회사명</Th>
+            <Td>{baseInfo.nameKr}</Td>
+          </tr>
+          <tr>
+            <Th>공동대표</Th>
+            <Td>{baseInfo.founders}</Td>
+          </tr>
+          <tr>
+            <Th>설립일</Th>
+            <Td>{baseInfo.compAnniversary}</Td>
+          </tr>
+          <tr>
+            <Th>소재지</Th>
+            <Td>
+              ({baseInfo.postal}) {baseInfo.tel}
+            </Td>
+          </tr>
+          <tr>
+            <Th>사업자 등록번호</Th>
+            <Td>{baseInfo.regNum}</Td>
+          </tr>
+          <tr>
+            <Th>E-mail</Th>
+            <Td>
+              <EmailLink to={baseInfo.email} />
+            </Td>
+          </tr>
+        </tbody>
+      </Table>
     </Container>
   );
 };
@@ -40,45 +50,29 @@ const Profile = () => {
 export default Profile;
 
 const Container = styled.div`
-  margin: 0 auto;
-  ${({theme}) => theme.breakpoint.md`
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
+  display: grid;
+  ${({ theme }) => theme.breakpoint.md`
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
   `}
-`
-const Wrap = styled.div`
-  flex: 1;
-  margin-bottom: 2rem;
-  padding: 0 2rem 0 0;
-  ${({theme}) => theme.breakpoint.md`
-    margin-bottom: 0;
-  `}
-`
-const Context = styled.div`
-  flex: 2;
-  max-width: 38rem;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 38rem;
-  ${({theme}) => theme.breakpoint.sm`
-    display: flex;
-    gap: 3rem;
-  `}
-`
+`;
 const Table = styled.table`
+  ${({ theme }) => theme.breakpoint.md`
+    margin-top: 2.5rem;
+  `}
   width: 100%;
   text-align: left;
   border-collapse: collapse;
-`
+`;
 const Th = styled.th`
   padding: 1.5em 0;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral500};
   font-weight: 700;
-  width: 25%;
-`
+  width: 30%;
+  vertical-align: top;
+`;
 const Td = styled.td`
   padding: 1.5em 0;
-  border-bottom: 1px solid #999;
-  width: 65%;
-`
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral500};
+  width: 75%;
+`;
