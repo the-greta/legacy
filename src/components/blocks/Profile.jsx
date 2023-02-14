@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import EmailLink from "@/components/atoms/EmailLink";
 import Title from "@/components/atoms/Title";
+import { baseInfo } from "@/const/base";
 
 const Profile = (props) => {
   return (
@@ -14,28 +15,30 @@ const Profile = (props) => {
         <tbody>
           <tr>
             <Th>회사명</Th>
-            <Td>주식회사 그레타</Td>
+            <Td>{baseInfo.nameKr}</Td>
           </tr>
           <tr>
             <Th>공동대표</Th>
-            <Td>김현태, 임종호</Td>
+            <Td>{baseInfo.founders}</Td>
           </tr>
           <tr>
             <Th>설립일</Th>
-            <Td>2021년 11월 3일</Td>
+            <Td>{baseInfo.compAnniversary}</Td>
           </tr>
           <tr>
             <Th>소재지</Th>
-            <Td>(04521) 서울특별시 중구 무교로 28, 시그너스빌딩 604호</Td>
+            <Td>
+              ({baseInfo.postal}) {baseInfo.tel}
+            </Td>
           </tr>
           <tr>
             <Th>사업자 등록번호</Th>
-            <Td>124-87-59303</Td>
+            <Td>{baseInfo.regNum}</Td>
           </tr>
           <tr>
             <Th>E-mail</Th>
             <Td>
-              <EmailLink to="hsfubAuif.hsfub/dpn" />
+              <EmailLink to={baseInfo.email} />
             </Td>
           </tr>
         </tbody>

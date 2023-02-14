@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import EmailLink from "@/components/atoms/EmailLink";
 import Title from "@/components/atoms/Title";
+import { baseInfo } from "@/const/base";
 
 import Map from "../../../public/image/map.png";
 
@@ -50,7 +51,7 @@ const Access = () => {
             >
               소재지 정보
             </div>
-            <div>서울특별시 중구 무교로 28, 시그너스빌딩 604호</div>
+            <div>{baseInfo.address}</div>
           </div>
           <ContactCard>
             <ContactTitle className={mono.className}>Contact</ContactTitle>
@@ -62,7 +63,7 @@ const Access = () => {
                   width={36}
                   height={36}
                 />
-                +82-70-8648-1024
+                {baseInfo.tel}
               </ContactWrap>
               <ContactWrap>
                 <Image

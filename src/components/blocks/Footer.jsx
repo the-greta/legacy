@@ -30,7 +30,6 @@ const Footer = (props) => {
         </NavSection>
       </Nav>
       <Wrap>
-        <AppLink href="/">개인정보처리방침</AppLink>
         <Copyright>© GRETA Inc. — All rights reserved</Copyright>
       </Wrap>
     </Container>

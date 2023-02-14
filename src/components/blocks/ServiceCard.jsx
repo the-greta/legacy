@@ -20,7 +20,7 @@ const ServiceCard = (props) => {
       <Context>
         <div>
           <h3>{props.name}</h3>
-          <div>{props.desc}</div>
+          <Desc>{props.desc}</Desc>
         </div>
         <LinkWrap>
           {props.href ? (
@@ -55,8 +55,11 @@ const Context = styled.div`
   flex: 2;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   gap: 1rem;
+`;
+const Desc = styled.div`
+  color: ${({ theme }) => theme.colors.black};
+  opacity: 0.7;
 `;
 const LinkWrap = styled.div`
   text-align: right;

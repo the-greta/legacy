@@ -27,4 +27,7 @@ const Subtitle = styled.sub`
   text-transform: uppercase;
   letter-spacing: 0.1em;
 `;
-const Context = styled.p``;
+const Context = styled.p`
+  color: ${({ theme }) => theme.colors.black};
+  opacity: 0.7;
+`;

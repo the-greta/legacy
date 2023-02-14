@@ -11,7 +11,7 @@ const TechCard = (props) => {
       <Context>
         <div>
           <h3>{props.tech.name}</h3>
-          <div>{props.tech.desc}</div>
+          <Wrap>{props.tech.desc}</Wrap>
         </div>
       </Context>
     </Container>
@@ -34,4 +34,8 @@ const Context = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+`;
+const Wrap = styled.div`
+  color: ${({ theme }) => theme.colors.black};
+  opacity: 0.7;
 `;
