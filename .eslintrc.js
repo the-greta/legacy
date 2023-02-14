@@ -18,6 +18,7 @@ module.exports = {
     "import/newline-after-import": "error", // import後に改行があることを確認
     "import/no-duplicates": "error", // 同じファイルのimportをマージ
     "unused-imports/no-unused-imports": "error", // 未使用のimport文を削除
+    camelcase: "off", // camelcase 에러 무시
   },
   settings: {
     react: {
