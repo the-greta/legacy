@@ -1,2 +1,1 @@
-# the-greta.github.io
-Official GRETA website
+# Official GRETA website
