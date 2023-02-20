@@ -1,4 +1,3 @@
-import dataPlatform from "../../public/image/platform.png";
 import dataConsulting from "../../public/image/solution.png";
 import dataSynthetic from "../../public/image/synthetic.png";
 
@@ -10,21 +9,15 @@ const slogan = {
 
 const servicesInfo = [
   {
-    name: "합성/재현 데이터 알고리즘",
+    name: "합성/재현 데이터 솔루션",
     src: dataSynthetic,
     desc: "특정 데이터를 기반으로 구조가 유사한 익명 데이터를 생성합니다. 자체 개발한 최첨단 통계 모형을 이용해 관련 기술을 개발합니다.",
     href: "services/synthetic-data",
   },
   {
-    name: "데이터 분석 컨설팅",
+    name: "데이터 분석 솔루션",
     src: dataConsulting,
     desc: "데이터 처리, 분석, 평가 등 클라이언트의 과제에 대한 솔루션을 제공해 드립니다.",
-    href: "",
-  },
-  {
-    name: "데이터 플랫폼 구축",
-    src: dataPlatform,
-    desc: "데이터 처리 및 매매가 가능한 플랫폼을 구축하고 있습니다.",
     href: "",
   },
 ];
