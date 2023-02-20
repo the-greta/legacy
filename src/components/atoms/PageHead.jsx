@@ -15,10 +15,7 @@ const PageHead = () => {
       <meta name="robots" content="index,follow" />
       <meta name="googlebot" content="index,follow" />
 
-      <meta
-        property="og:title"
-        content="주식회사 GRETA &amp; Look | 한 단계 높은 데이터 솔루션"
-      />
+      <meta property="og:title" content="한 단계 높은 데이터 솔루션 | GRETA" />
       <meta
         property="og:description"
         content="주식회사 GRETA 홈페이지입니다."
