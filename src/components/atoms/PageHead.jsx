@@ -4,7 +4,7 @@ import React from "react";
 const PageHead = () => {
   return (
     <Head>
-      <title>주식회사 GRETA | 한 단계 높은 데이터 솔루션</title>
+      <title>한 단계 높은 데이터 솔루션 | GRETA</title>
       <link rel="canonical" href="https://the-greta.com" />
       <meta name="description" content="주식회사 GRETA 홈페이지입니다." />
       <meta
@@ -29,7 +29,11 @@ const PageHead = () => {
       <meta property="og:locale" content="ko_KR" />
       <meta property="og:site_name" content="한 단계 높은 데이터 솔루션" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://pickk.one/channel/146" />
+      <meta property="og:url" content="https://the-greta.com" />
+      <meta
+        name="naver-site-verification"
+        content="435540f1a0201579caf9dda6de2f3d150c9b00ea"
+      />
     </Head>
   );
 };
