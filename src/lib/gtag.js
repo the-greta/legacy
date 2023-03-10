@@ -6,9 +6,8 @@ export const existsGaID = GA_ID !== "";
 // PV 측정
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (path) => {
-  console.log(GA_ID);
   window.gtag("config", GA_ID, {
-    debug_mode: true,
+    // debug_mode: true,
     page_path: path,
   });
 };
