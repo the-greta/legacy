@@ -5,18 +5,22 @@ import { AnimatePresence } from "framer-motion";
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
+import GoogleAnalytics from "@/components/atoms/GoogleAnalytics";
 import PageHead from "@/components/atoms/PageHead";
 import Footer from "@/components/blocks/Footer";
 import Header from "@/components/blocks/Header";
 import { navInfo } from "@/const/base";
+import usePageView from "@/hooks/usePageView";
 import { theme } from "@/theme/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps, router }) {
+  usePageView()
   return (
     <>
       <PageHead />
+      <GoogleAnalytics/>
       <ThemeProvider theme={theme}>
         <div className={inter.className}>
           <div>
