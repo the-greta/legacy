@@ -26,7 +26,7 @@ const Profile = (props) => {
             <Td>{baseInfo.compAnniversary}</Td>
           </tr>
           <tr>
-            <Th>소재지</Th>
+            <Th>연락처</Th>
             <Td>
               ({baseInfo.postal}) {baseInfo.tel}
             </Td>
