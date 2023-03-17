@@ -28,7 +28,7 @@ const Profile = (props) => {
           <tr>
             <Th>연락처</Th>
             <Td>
-              ({baseInfo.postal}) {baseInfo.tel}
+              {baseInfo.tel}
             </Td>
           </tr>
           <tr>
