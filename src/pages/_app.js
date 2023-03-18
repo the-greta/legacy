@@ -16,11 +16,11 @@ import { theme } from "@/theme/theme";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps, router }) {
-  usePageView()
+  usePageView();
   return (
     <>
+      <GoogleAnalytics />
       <PageHead />
-      <GoogleAnalytics/>
       <ThemeProvider theme={theme}>
         <div className={inter.className}>
           <div>

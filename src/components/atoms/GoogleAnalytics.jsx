@@ -1,18 +1,20 @@
-import Script from "next/script";
+import Head from "next/head";
 import React from "react";
 
 import { existsGaId, GA_ID } from "@/lib/gtag";
 
 const GoogleAnalytics = () => {
+  console.log(existsGaId);
   return (
     <>
       {existsGaId && (
-        <>
-          <Script
+        <Head>
+          {/* Google Analytics */}
+          <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           />
-          <Script
+          <script
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
@@ -23,7 +25,7 @@ const GoogleAnalytics = () => {
               });`,
             }}
           />
-        </>
+        </Head>
       )}
     </>
   );
