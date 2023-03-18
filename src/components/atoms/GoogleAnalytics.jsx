@@ -1,31 +1,28 @@
-import Head from "next/head";
+import Script from "next/script";
 import React from "react";
 
 import { existsGaId, GA_ID } from "@/lib/gtag";
 
 const GoogleAnalytics = () => {
-  console.log(existsGaId);
   return (
     <>
       {existsGaId && (
-        <Head>
+        <>
           {/* Google Analytics */}
-          <script
-            async
+          <Script
+            defer
+            strategy="afterInteractive"
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+          <Script id="ga" defer strategy="afterInteractive">
+            {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${GA_ID}', {
-                page_path: window.location.pathname,
-              });`,
-            }}
-          />
-        </Head>
+              gtag('config', '${GA_ID}');
+            `}
+          </Script>
+        </>
       )}
     </>
   );
