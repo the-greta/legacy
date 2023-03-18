@@ -1,19 +1,18 @@
 export const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? "";
 
 // ID가 없는 경우
-export const existsGaID = GA_ID !== "";
+export const existsGaId = GA_ID !== "";
 
 // PV 측정
 export const pageview = (path) => {
   window.gtag("config", GA_ID, {
-    // debug_mode: true,
     page_path: path,
   });
 };
 
 // GA 이벤트 발화
 export const event = ({ action, category, label, value = "" }) => {
-  if (!existsGaID) {
+  if (!existsGaId) {
     return;
   }
 
