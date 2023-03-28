@@ -32,10 +32,6 @@ const Profile = (props) => {
             </Td>
           </tr>
           <tr>
-            <Th>사업자 등록번호</Th>
-            <Td>{baseInfo.regNum}</Td>
-          </tr>
-          <tr>
             <Th>E-mail</Th>
             <Td>
               <EmailLink to={baseInfo.email} />
