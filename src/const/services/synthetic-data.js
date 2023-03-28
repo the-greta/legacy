@@ -7,6 +7,7 @@ const pageInfo = {
     " 선택 편향(Selection Match) 등 데이터 편향으로 인해 데이터 보정이 필요한 경우",
     "데이터 결합 과정에서 매칭이 되지 않은 케이스에 대한 정보를 생성하려는 경우",
   ],
+  href: "https://www.kisdi.re.kr/report/view.do?key=m2101113025339&arrMasterId=4311435&masterId=4311435&artId=706876",
 };
 
 const techsInfo = {
