@@ -25,6 +25,13 @@ const Summary = () => {
         <Desc>
           <Title sub="description" />
           <p style={{ maxWidth: "40rem" }}>{pageInfo.desc}</p>
+          <LinkWrap>
+            {props.href ? (
+              <AppLink href={props.href} styleType="detail">
+                Learn More
+              </AppLink>
+            ) : null}
+          </LinkWrap>
         </Desc>
       </Grid>
     </Container>
