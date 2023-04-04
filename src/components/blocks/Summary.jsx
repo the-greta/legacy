@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import AppLink from "@/components/atoms/AppLink";
 import Title from "@/components/atoms/Title";
 import { pageInfo } from "@/const/services/synthetic-data";
 
@@ -25,6 +26,12 @@ const Summary = () => {
         <Desc>
           <Title sub="description" />
           <p style={{ maxWidth: "40rem" }}>{pageInfo.desc}</p>
+          <AppLink
+            href="https://www.kisdi.re.kr/report/view.do?key=m2101113025339&arrMasterId=4311435&masterId=4311435&artId=706876#none"
+            styleType="detail"
+          >
+            관련 자료: 합성 데이터(Synthetic data)의 부상
+          </AppLink>
         </Desc>
       </Grid>
     </Container>
